@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin: 0; padding: 20px; font-family: sans-serif; text-align: center; }
+  #score { font-size: 64px; font-weight: bold; color: #000; }
+</style>
+</head>
+<body>
+<div id="score">—</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const s = params.get('score');
+  if (s) document.getElementById('score').innerText = s;
+</script>
+</body>
+</html>
