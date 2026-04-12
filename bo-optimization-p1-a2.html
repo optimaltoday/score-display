@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPTIMIZATION · Phase 1 · Audit 2 · Cost Structure · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #282730;
+    --text: #DFDFDE;
+    --gold: #C4912A;
+    --divider: rgba(196,145,42,0.25);
+    --surface: rgba(255,255,255,0.04);
+    --score-size: clamp(72px, 12vw, 120px);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #F5F3EE;
+      --text: #1A1920;
+      --gold: #B8841F;
+      --divider: rgba(184,132,31,0.3);
+      --surface: rgba(0,0,0,0.04);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.75;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 48px 0 36px;
+    text-align: center;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 0;
+  }
+
+  .wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(13px, 2vw, 15px);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+
+  .report-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: clamp(10px, 1.5vw, 11px);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.45;
+  }
+
+  /* ── MAIN CONTAINER ── */
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  /* ── SCORE SECTION ── */
+  .score-section {
+    text-align: center;
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .score-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin-bottom: 20px;
+  }
+
+  .score-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: var(--score-size);
+    line-height: 1;
+    color: var(--gold);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .score-denom {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    opacity: 0.4;
+    margin-bottom: 28px;
+  }
+
+  /* ── BANDS TABLE ── */
+  .bands-section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .section-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(22px, 3.5vw, 28px);
+    line-height: 1.25;
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+  }
+
+  .bands-intro {
+    font-size: 14px;
+    opacity: 0.55;
+    margin-bottom: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .band-row {
+    display: grid;
+    grid-template-columns: 130px 90px 1fr;
+    gap: 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--divider);
+    align-items: start;
+  }
+
+  .band-row:last-child { border-bottom: 1px solid var(--divider); }
+
+  .band-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-right: 16px;
+    padding-top: 2px;
+  }
+
+  .band-range {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+    padding-top: 3px;
+  }
+
+  .band-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    opacity: 0.8;
+  }
+
+  /* ── CONTENT SECTIONS ── */
+  .content-section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .content-section p {
+    margin-bottom: 18px;
+    opacity: 0.85;
+  }
+
+  .content-section p:last-child { margin-bottom: 0; }
+
+  .content-section strong {
+    font-weight: 500;
+    color: var(--gold);
+    opacity: 1;
+  }
+
+  /* ── DIAGNOSIS BANDS ── */
+  .diagnosis-band {
+    background: var(--surface);
+    border-left: 2px solid var(--gold);
+    padding: 28px 28px 24px;
+    margin: 28px 0;
+  }
+
+  .diagnosis-band-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .diagnosis-band p {
+    opacity: 0.82;
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .action-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  /* ── WHAT COMES NEXT ── */
+  .next-section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .next-preview {
+    background: var(--surface);
+    padding: 28px;
+    margin: 24px 0;
+  }
+
+  .next-preview-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  .next-preview p {
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.75;
+    margin-bottom: 10px;
+  }
+
+  .next-preview em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--gold);
+    opacity: 0.9;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    margin-top: 36px;
+    padding: 32px;
+    border: 1px solid var(--divider);
+    text-align: center;
+  }
+
+  .cta-block p {
+    font-size: 15px;
+    opacity: 0.75;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .cta-link {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--gold);
+    padding: 14px 32px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .cta-link:hover { opacity: 0.85; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 48px 24px;
+    border-top: 1px solid var(--divider);
+    margin-top: 0;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    opacity: 0.4;
+    margin-bottom: 8px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    opacity: 0.25;
+    text-transform: uppercase;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 560px) {
+    .band-row { grid-template-columns: 1fr; gap: 6px; }
+    .band-range { opacity: 0.4; font-size: 12px; }
+    .diagnosis-band { padding: 20px 18px; }
+    .cta-block { padding: 24px 18px; }
+  }
+
+  /* ── FADE IN ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .score-section, .bands-section, .content-section, .next-section {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .bands-section { animation-delay: 0.1s; }
+  .content-section { animation-delay: 0.2s; }
+  .next-section { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results  ·  OPTIMIZATION · Optimal Operations  ·  Phase 1 · Audit 2 of 12</div>
+</header>
+
+<main>
+
+  <!-- SCORE -->
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="score-value">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+
+  <!-- BANDS -->
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your operational coherence in this area.</div>
+
+    <div class="band-row">
+      <div class="band-name">Leveraging</div>
+      <div class="band-range">30 – 40</div>
+      <div class="band-desc">Your cost structure is largely governed. Exits are visible, reviewed, and purposeful. The leak at this level is subtle — found in inertia, not ignorance.</div>
+    </div>
+    <div class="band-row">
+      <div class="band-name">Leaking</div>
+      <div class="band-range">19 – 29</div>
+      <div class="band-desc">Partial governance. Some costs are tracked. Others survive unchallenged. Money exits through gaps that look small individually and compound structurally.</div>
+    </div>
+    <div class="band-row">
+      <div class="band-name">Losing</div>
+      <div class="band-range">8 – 18</div>
+      <div class="band-desc">Your cost structure is ungoverned. Money exits without a clear picture of what it produces. This is not a cash flow problem — it is a governance problem. And it compounds every month it is unaddressed.</div>
+    </div>
+  </section>
+
+  <!-- PHASE CONTEXT -->
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 1 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 1 is Awareness. Before anything can be fixed, it must be seen.</p>
+<p>The OPTIMIZATION Pillar covers how your business operates — where money moves, how costs are governed, where decisions slow down, and what stops when you step away. Over 12 audits across 4 phases, this Pillar maps your operational coherence from the ground up.</p>
+<p>Audit 1 established whether your business can see its own financial reality. Audit 2 examines what that reality actually contains. Visibility without scrutiny is incomplete. A business that can see its costs clearly but has never questioned whether those costs are justified is still leaking — just with better lighting.</p>
+<p>If your score is in the Losing band, cost governance is your structural priority before any growth initiative. If you are Leaking, partial governance exists — and the gaps are measurable. If you are Leveraging, your cost structure is largely sound — and this audit confirms which inertia-driven costs remain.</p>
+  </section>
+
+  <!-- AUDIT CONTEXT -->
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 2 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Every business has costs that exist because they were never stopped.</p>
+<p>Not because they are necessary. Not because they produce a return. Because stopping them requires a decision — and the decision was never made. Cost structure audit exists to force that decision. Systematically. Across every category of exit.</p>
+<p>This audit does not ask whether your business is profitable. It asks whether every baht exiting your business is earning its place. Those are different questions. A profitable business can carry 10–15% in costs that produce nothing — and never know it, because the profit masks the leak.</p>
+<p>Audit 2 removes that mask.</p>
+  </section>
+
+  <!-- DIAGNOSIS -->
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 2 Diagnosis</div>
+    <div class="section-title">Cost Structure</div>
+    <p style="opacity:0.55; font-size:14px; margin-bottom:32px;">Eight dimensions of cost governance — recurring cost visibility, supplier contract review cadence, revenue-generating versus overhead distinction, return measurement, subscription and tool audit, negotiation practice, cost-to-revenue growth comparison, and approval process discipline.</p>
+
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your cost structure is operating on default. Costs were added when they seemed reasonable and have continued without review. No one has asked — systematically — what each cost produces. And because no one has asked, the answer is unknown.</p>
+<p>This is the structural definition of money leak. Not one large drain. A dozen small ones that have never been questioned. Individually they look manageable. Collectively they represent a significant percentage of annual revenue exiting without verified return.</p>
+<div class="action-label">What to do this week</div>
+<p>Pull your last three bank and card statements. List every recurring charge. Label each one: Revenue-Generating, Operational Necessity, or Unreviewed. This takes 90 minutes. It surfaces the gaps immediately.</p>
+<div class="action-label">Within 14 days</div>
+<p>Cancel or pause every Unreviewed cost. If you cannot identify what it produces, it should not continue while you decide.</p>
+<div class="action-label">Within 30 days</div>
+<p>Contact your top three suppliers. Ask for revised rates. Most will negotiate when asked directly. Most are never asked.</p>
+    </div>
+
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Partial governance exists. Some costs are tracked and reviewed. Others survive on inertia — continued not because they are necessary but because stopping them was never prioritized.</p>
+<p>The risk at this level is complacency. The structure looks functional enough that nothing feels urgent. Meanwhile costs that were justified two years ago under different conditions continue unchanged. Business conditions have changed. The cost structure has not caught up.</p>
+<div class="action-label">What to do this week</div>
+<p>Identify every supplier or vendor contract not reviewed in the past 12 months. Each one is a negotiation opportunity not yet taken.</p>
+<div class="action-label">Within 14 days</div>
+<p>Build a cost registry. One document. Every recurring cost, its monthly value, its category, its last review date. Update it quarterly. This eliminates most cost drift permanently.</p>
+<div class="action-label">Within 30 days</div>
+<p>Identify which costs are growing faster than revenue. Any cost that outpaces revenue growth without documented justification is a structural leak in progress.</p>
+    </div>
+
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your cost structure is largely governed and reviewed. Costs are visible, purposeful, and aligned to current operational need. You are operating with cost discipline that most businesses at your stage have not yet built.</p>
+<p>The inertia-driven costs that remain — and there are always some — are your next target. Not urgently. Systematically.</p>
+<div class="action-label">What to do now</div>
+<p>Introduce a formal quarterly negotiation cycle. Scheduled. Calendar-blocked. Not reactive. Systematic supplier negotiation recovers 3–8% of annual supplier spend in documented cases. At your cost governance level, that recovery is accessible.</p>
+    </div>
+  </section>
+
+  <!-- WHAT COMES NEXT -->
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 3 arrives next week.</div>
+
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 3 — Overhead</div>
+      <em>What are your fixed costs — and is each one structurally justified?</em>
+      <p>Cost structure audit examines what exits. Overhead audit examines what is locked in. Fixed costs — the costs that exist regardless of revenue — are the most dangerous category because they compound in silence during revenue contractions.</p>
+<p>Audit 3 examines that layer directly. It completes Phase 1.</p>
+    </div>
+
+    <div class="cta-block">
+      <p>If your score raised questions about your current operational structure, the Futureproof™ Diagnostic surfaces exactly where your OPTIMIZATION Pillar is leaking most — and maps the correct sequence for structural correction. It is a private 90-minute engagement that produces a written one-page summary of your highest-priority structural gaps and the recommended first move.</p>
+      <a href="https://1k1.uk/" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+
+<script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var s = params.get('score');
+    var el = document.getElementById('score-value');
+    if (s && !isNaN(parseInt(s, 10))) {
+      el.textContent = parseInt(s, 10);
+    }
+  })();
+</script>
+
+</body>
+</html>

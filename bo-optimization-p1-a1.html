@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPTIMIZATION · Phase 1 · Audit 1 · Cash Flow Separation · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #282730;
+    --text: #DFDFDE;
+    --gold: #C4912A;
+    --divider: rgba(196,145,42,0.25);
+    --surface: rgba(255,255,255,0.04);
+    --score-size: clamp(72px, 12vw, 120px);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #F5F3EE;
+      --text: #1A1920;
+      --gold: #B8841F;
+      --divider: rgba(184,132,31,0.3);
+      --surface: rgba(0,0,0,0.04);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.75;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 48px 0 36px;
+    text-align: center;
+    border-bottom: 1px solid var(--divider);
+    margin-bottom: 0;
+  }
+
+  .wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(13px, 2vw, 15px);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.85;
+    margin-bottom: 8px;
+  }
+
+  .report-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: clamp(10px, 1.5vw, 11px);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.45;
+  }
+
+  /* ── MAIN CONTAINER ── */
+  main {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  /* ── SCORE SECTION ── */
+  .score-section {
+    text-align: center;
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .score-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin-bottom: 20px;
+  }
+
+  .score-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: var(--score-size);
+    line-height: 1;
+    color: var(--gold);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .score-denom {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    opacity: 0.4;
+    margin-bottom: 28px;
+  }
+
+  /* ── BANDS TABLE ── */
+  .bands-section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .section-eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    opacity: 0.7;
+    margin-bottom: 6px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(22px, 3.5vw, 28px);
+    line-height: 1.25;
+    margin-bottom: 28px;
+    letter-spacing: 0.01em;
+  }
+
+  .bands-intro {
+    font-size: 14px;
+    opacity: 0.55;
+    margin-bottom: 28px;
+    letter-spacing: 0.05em;
+  }
+
+  .band-row {
+    display: grid;
+    grid-template-columns: 130px 90px 1fr;
+    gap: 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--divider);
+    align-items: start;
+  }
+
+  .band-row:last-child { border-bottom: 1px solid var(--divider); }
+
+  .band-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    padding-right: 16px;
+    padding-top: 2px;
+  }
+
+  .band-range {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    opacity: 0.5;
+    letter-spacing: 0.05em;
+    padding-top: 3px;
+  }
+
+  .band-desc {
+    font-size: 15px;
+    line-height: 1.65;
+    opacity: 0.8;
+  }
+
+  /* ── CONTENT SECTIONS ── */
+  .content-section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .content-section p {
+    margin-bottom: 18px;
+    opacity: 0.85;
+  }
+
+  .content-section p:last-child { margin-bottom: 0; }
+
+  .content-section strong {
+    font-weight: 500;
+    color: var(--gold);
+    opacity: 1;
+  }
+
+  /* ── DIAGNOSIS BANDS ── */
+  .diagnosis-band {
+    background: var(--surface);
+    border-left: 2px solid var(--gold);
+    padding: 28px 28px 24px;
+    margin: 28px 0;
+  }
+
+  .diagnosis-band-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .diagnosis-band p {
+    opacity: 0.82;
+    margin-bottom: 14px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .action-label {
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  /* ── WHAT COMES NEXT ── */
+  .next-section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .next-preview {
+    background: var(--surface);
+    padding: 28px;
+    margin: 24px 0;
+  }
+
+  .next-preview-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+  }
+
+  .next-preview p {
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.75;
+    margin-bottom: 10px;
+  }
+
+  .next-preview em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--gold);
+    opacity: 0.9;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  /* ── CTA ── */
+  .cta-block {
+    margin-top: 36px;
+    padding: 32px;
+    border: 1px solid var(--divider);
+    text-align: center;
+  }
+
+  .cta-block p {
+    font-size: 15px;
+    opacity: 0.75;
+    margin-bottom: 20px;
+    line-height: 1.7;
+  }
+
+  .cta-link {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--gold);
+    padding: 14px 32px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .cta-link:hover { opacity: 0.85; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 48px 24px;
+    border-top: 1px solid var(--divider);
+    margin-top: 0;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    opacity: 0.4;
+    margin-bottom: 8px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    opacity: 0.25;
+    text-transform: uppercase;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 560px) {
+    .band-row { grid-template-columns: 1fr; gap: 6px; }
+    .band-range { opacity: 0.4; font-size: 12px; }
+    .diagnosis-band { padding: 20px 18px; }
+    .cta-block { padding: 24px 18px; }
+  }
+
+  /* ── FADE IN ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .score-section, .bands-section, .content-section, .next-section {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .bands-section { animation-delay: 0.1s; }
+  .content-section { animation-delay: 0.2s; }
+  .next-section { animation-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results  ·  OPTIMIZATION · Optimal Operations  ·  Phase 1 · Audit 1 of 12</div>
+</header>
+
+<main>
+
+  <!-- SCORE -->
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="score-value">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+
+  <!-- BANDS -->
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your operational coherence in this area.</div>
+
+    <div class="band-row">
+      <div class="band-name">Leveraging</div>
+      <div class="band-range">30 – 40</div>
+      <div class="band-desc">Your cash flow architecture is largely coherent. Separation exists. Visibility is real. The leak at this level is subtle — and measurable.</div>
+    </div>
+    <div class="band-row">
+      <div class="band-name">Leaking</div>
+      <div class="band-range">19 – 29</div>
+      <div class="band-desc">Partial visibility. Some separation. But the picture is incomplete. Decisions are being made with a blind spot. Money is exiting through gaps you are not yet measuring.</div>
+    </div>
+    <div class="band-row">
+      <div class="band-name">Losing</div>
+      <div class="band-range">8 – 18</div>
+      <div class="band-desc">Your cash flow is structurally blind. True profit is invisible. Personal and business money are mixed — which means every financial decision is made on instinct, not data. This is the most common and most correctable source of money leak in family businesses.</div>
+    </div>
+  </section>
+
+  <!-- PHASE CONTEXT -->
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 1 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 1 is Awareness. Before anything can be fixed, it must be seen.</p>
+<p>The OPTIMIZATION Pillar covers how your business operates — where money moves, how costs are governed, where decisions slow down, and what stops when you step away. Over 12 audits across 4 phases, this Pillar maps your operational coherence from the ground up.</p>
+<p>Audit 1 begins at the most fundamental level: cash flow separation. Not because it is the most sophisticated area to examine — but because without it, nothing else in your financial picture is reliable. You cannot measure margin you cannot see. You cannot govern costs you cannot isolate. Every other functional audit in this Pillar depends on this foundation being real.</p>
+<p>If your score is in the Losing band, this is your most urgent structural priority — before technology, before hiring, before strategy. If you are Leaking, the foundation exists but has gaps that compound over time. If you are Leveraging, the structure works — and this phase will confirm how solid it actually is before Phase 2 goes deeper.</p>
+  </section>
+
+  <!-- AUDIT CONTEXT -->
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 1 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Cash flow separation is the entry point for a reason.</p>
+<p>It is not the most complex operational challenge a business faces. It is the most foundational. Without it, margin is a feeling rather than a number. Without it, cost governance has no baseline. Without it, every financial decision — pricing, hiring, investment, distribution — is made against a distorted picture.</p>
+<p>This audit does not ask whether your systems are sophisticated. It asks whether your business can see its own financial reality at all. That question must be answered before any other functional question is worth asking.</p>
+<p>If your score here is low, nothing else in this Pillar can be accurately assessed until this is corrected. If your score is high, this audit confirms the floor is solid — and Phase 1 moves forward on stable ground.</p>
+  </section>
+
+  <!-- DIAGNOSIS -->
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 1 Diagnosis</div>
+    <div class="section-title">Cash Flow Separation</div>
+    <p style="opacity:0.55; font-size:14px; margin-bottom:32px;">Eight dimensions of cash flow visibility — account separation, margin clarity, expense categorization, financial reporting rhythm, cash position awareness, and process documentation.</p>
+
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your business cannot currently see its own financial reality. Cash flow and personal expenses are likely mixed in the same accounts. Profit is a feeling, not a number. Financial decisions are made on instinct — and instinct at this level is expensive.</p>
+<p>This is not a failure of intent. It is a failure of structure. The structure has not been built. And until it is, every month that passes widens the gap between what your business actually produces and what you can see it producing.</p>
+<p>Multi-generational family businesses operating without cash flow separation typically carry 15–25% structural inefficiency that never appears on any report — because no report exists that could surface it. That inefficiency compounds annually. It does not self-correct.</p>
+<div class="action-label">What to do this week</div>
+<p>Open a dedicated business operating account if one does not exist. Move all business income and expenses exclusively through it — starting immediately. This single action does not solve the problem. It creates the condition in which the problem becomes visible.</p>
+<div class="action-label">Within 14 days</div>
+<p>Commission a single-page profit and loss statement from your bookkeeper covering the last three months. This becomes your baseline. Not a sophisticated document — a starting document.</p>
+<div class="action-label">Within 30 days</div>
+<p>Establish a fixed weekly 30-minute financial review. Bank statement as source of truth. Same time every week. This is the habit that makes everything else possible.</p>
+    </div>
+
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Some architecture exists. Account separation is partially in place. Financial reporting happens — but not consistently, not completely, and not in a format that gives you real-time confidence in your margin position.</p>
+<p>The risk at this level is not crisis — it is drift. The structure looks functional enough that nothing feels urgent. Meanwhile costs accumulate in the blind spots, margin erodes slowly, and the gap between what the business produces and what you can verify it produces quietly widens.</p>
+<div class="action-label">What to do this week</div>
+<p>Identify which of the eight questions scored 1 or 2. That is your highest-priority correction. Address it before the next audit arrives.</p>
+<div class="action-label">Within 14 days</div>
+<p>If personal and business finances are mixed in any remaining account, correct this now. Every day of mixing produces a distorted financial picture.</p>
+<div class="action-label">Within 30 days</div>
+<p>Move from ad-hoc financial checking to a fixed weekly review slot. Consistency produces clarity that sophistication cannot replace at this stage.</p>
+    </div>
+
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your cash flow foundation is structurally coherent. Accounts are separated. Margin is visible. Reporting exists. You are operating with financial clarity that most family businesses at your stage have not yet built.</p>
+<p>This is not the finish line. It is the floor. Phase 1 has two more audits — and the next two examine cost structure and overhead, where even businesses with strong cash flow visibility carry silent inefficiencies that a separated account cannot surface on its own.</p>
+<div class="action-label">What to do now</div>
+<p>Document what works. A process that exists only in practice is fragile. One that is documented can be delegated and replicated. Write it down before Phase 2.</p>
+    </div>
+  </section>
+
+  <!-- WHAT COMES NEXT -->
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 2 arrives next week.</div>
+
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 2 — Cost Structure</div>
+      <em>Where is money exiting your business without producing a return?</em>
+      <p>Cash flow separation makes your financial picture visible. Cost structure audit examines what that picture actually contains. It is one thing to see where money goes. It is another to determine whether each exit is justified. Businesses with strong cash flow visibility routinely carry 8–15% in costs that survive on inertia rather than performance.</p>
+<p>Audit 2 maps that territory.</p>
+    </div>
+
+    <div class="cta-block">
+      <p>If your score raised questions about your current operational structure, the Futureproof™ Diagnostic surfaces exactly where your OPTIMIZATION Pillar is leaking most — and maps the correct sequence for structural correction. It is a private 90-minute engagement that produces a written one-page summary of your highest-priority structural gaps and the recommended first move.</p>
+      <a href="https://1k1.uk/" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+
+<script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var s = params.get('score');
+    var el = document.getElementById('score-value');
+    if (s && !isNaN(parseInt(s, 10))) {
+      el.textContent = parseInt(s, 10);
+    }
+  })();
+</script>
+
+</body>
+</html>
