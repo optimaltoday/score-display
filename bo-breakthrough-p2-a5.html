@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BREAKTHROUGH · Phase 2 · Audit 5 · Relationship Pattern · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results &nbsp;·&nbsp; BREAKTHROUGH · Constructive Patterns &nbsp;·&nbsp; Phase 2 · Audit 5 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your pattern coherence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 – 40</div><div class="band-desc">Your significant business relationships are structurally managed. Recurring conflicts are rare. When relationship tension arises, it is addressed at the structural level rather than managed situationally.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 – 29</div><div class="band-desc">Some relationship patterns are recognized. Certain recurring conflicts — with specific clients, specific family members, specific supplier types — are anticipated. The structural response that would prevent recurrence has not been built.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 – 18</div><div class="band-desc">Your business carries destructive relationship patterns. The same categories of conflict — with clients, suppliers, family members, or partners — recur at predictable intervals. Each instance is resolved at some cost. The structural dynamic that produces the conflict remains unchanged.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 2 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 2 is Measurement. Audit 4 examined the growth ceiling pattern. Audit 5 examines relationship patterns — the recurring dynamics in your business's significant relationships that produce conflict and cost at predictable intervals.</p><p>Relationship patterns are the BREAKTHROUGH Pillar's most personally felt dimension. They are also one of the most commercially significant: conflict with a major client can cost a relationship worth years of revenue. Conflict within the founding family can split a business worth decades of accumulated wealth. And yet most relationship conflicts are not random events — they are predictable patterns produced by structural conditions that recur in every relationship of a similar type.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 5 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Most business relationship conflicts are pattern events, not isolated incidents.</p><p>The family business that disputes pricing authority with the same supplier type, over and over. The founding family that conflicts about the same category of strategic decision, generation after generation. The business that loses clients of the same profile at the same stage of the relationship — for the same unstated reason each time. These are not bad luck. They are structural patterns produced by the same underlying dynamic in each instance.</p><p>Identifying the structural dynamic is the BREAKTHROUGH Pillar's contribution to relationship management. Not individual conflict resolution — structural pattern intervention that changes the conditions before the next conflict of the same type develops.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 5 Diagnosis</div>
+    <div class="section-title">Relationship Pattern</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of relationship pattern — recurring conflict category identification, client relationship loss pattern, supplier conflict frequency and type, family business tension pattern, partner relationship failure points, conflict escalation pattern, structural cause analysis depth, and relationship pattern cost measurement.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your business carries destructive relationship patterns that recur at predictable intervals. The same categories of conflict — with specific client types, with family members over specific decision categories, with suppliers over specific terms — return despite previous resolution. Each resolution is costly. The structural dynamic that produces the conflict remains unchanged. And the pattern repeats.</p><div class='action-label'>What to do this week</div><p>Map your significant relationship conflicts over the past three years. For each: what category of conflict was it? Who was involved? What was the trigger? What was the resolution? Look for the pattern across conflicts: the same trigger type, the same parties, the same resolution pathway. The pattern is the structural signal.</p><div class='action-label'>Within 14 days</div><p>Identify the structural dynamic beneath your most frequent conflict category. Is it unclear expectations set at the beginning of the relationship? Authority ambiguity in a family context? Misaligned incentives with a supplier? Undefined boundaries in a partnership? Each structural dynamic has a structural intervention that changes the conditions before the next conflict develops.</p><div class='action-label'>Within 30 days</div><p>Implement one structural intervention for your highest-cost recurring relationship conflict. A written expectations document for a frequently conflicted client relationship type. A family council protocol for the decision categories that produce family conflict. A formal supplier agreement that specifies the terms that were previously the source of dispute. One structural intervention changes the conditions for every future relationship of that type.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Some relationship patterns are recognized. Certain conflict categories are anticipated. The gap is in the structural response — the relationship architecture that would prevent the pattern rather than manage each instance. Recognition without structural intervention is awareness without progress.</p><div class='action-label'>What to do this week</div><p>For your most frequently recognized relationship conflict pattern: what specific structural element would need to change to prevent the next instance? Not a communication improvement — a structural change. Written expectations. Authority definition. Incentive realignment. A boundary document. Identify the structural change and implement it before the next instance arrives.</p><div class='action-label'>Within 14 days</div><p>Audit your most significant current relationships for early pattern signals. In any relationship where the same category of tension has appeared before: is it appearing again? Early intervention — addressing the structural condition before it produces a conflict — is dramatically cheaper than conflict resolution after the damage is done.</p><div class='action-label'>Within 30 days</div><p>Establish a relationship review practice. Quarterly, review your most significant relationships for pattern signals. This early warning system converts reactive conflict management into proactive relationship architecture.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your business's significant relationships are structurally managed. Recurring conflict patterns are rare. When tension arises, it is addressed at the structural level. The opportunity at this level is in proactive pattern prevention — building the relationship architecture for your highest-value relationships before tension develops, rather than after.</p><div class='action-label'>What to do now</div><p>Document the relationship architecture that is working in your highest-value relationships. What structural elements — written expectations, clear authority, aligned incentives, regular review — make those relationships conflict-resistant? Apply those elements proactively to your next significant new relationship of the same type before tension has a chance to develop.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 6 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 6 — Risk Pattern</div>
+      <em>What risks do you consistently underestimate — and what is the pattern of that underestimation costing you?</em>
+      <p>Relationship pattern audit examined recurring conflict dynamics. Risk pattern audit examines a different pattern category: the systematic underestimation of specific risk types that produces predictable, avoidable losses at regular intervals.</p>
+    </div>
+    <div class="cta-block">
+      <p>If destructive relationship patterns are producing recurring conflict and cost, the Futureproof™ Diagnostic diagnoses the structural dynamic beneath each pattern and maps the relationship architecture that prevents recurrence. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; BREAKTHROUGH Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

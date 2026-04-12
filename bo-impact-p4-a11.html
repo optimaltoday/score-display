@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMPACT · Phase 4 · Audit 11 · Competitor Positioning · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results &nbsp;·&nbsp; IMPACT · Congruent Branding &nbsp;·&nbsp; Phase 4 · Audit 11 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your brand coherence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 – 40</div><div class="band-desc">Your positioning is clearly differentiated from your nearest competitors. Prospective clients understand why you are the correct choice for their specific situation — and why an alternative is not.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 – 29</div><div class="band-desc">Your positioning is better than your competitors in certain dimensions but not clearly differentiated in the dimensions that matter most to your highest-value prospective clients. You win some competitive evaluations and lose others — suggesting that your differentiation is not yet structurally decisive.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 – 18</div><div class="band-desc">Your positioning is not clearly differentiated from your nearest competitors in the eyes of your most valuable prospective clients. Competitive evaluations are decided primarily on price — because your positioning does not give the client a basis for choosing you on any other dimension.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 4 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 4 is Prescription. Audit 10 addressed partnership positioning. Audit 11 examines competitive positioning — the impression your business creates relative to the alternatives your prospective clients are evaluating simultaneously.</p><p>Competitive positioning is the IMPACT Pillar's most commercially immediate measurement. In every commercial evaluation, your positioning is assessed against alternatives. If that assessment defaults to price comparison, your positioning has failed its commercial function regardless of how coherent it is in isolation.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 11 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>You are never evaluated in isolation. You are always evaluated in comparison.</p><p>The question a prospective client is asking is not whether your business is good. It is whether your business is the right choice given the alternatives available at the time. Your positioning must answer that question before the client asks it — by articulating specifically why you are the correct choice for their situation in terms that make the alternative feel like an obvious downgrade.</p><p>This audit examines whether your positioning succeeds in that comparative context — and if not, where the specific gaps are that allow price to become the deciding factor.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 11 Diagnosis</div>
+    <div class="section-title">Competitor Positioning</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of competitive positioning — competitor landscape clarity, differentiation versus nearest competitor specificity, win rate in competitive evaluations, price differential in wins versus losses, client language about competitive alternatives, positioning gap versus highest-value competitor, competitive intelligence recency, and switching cost architecture.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your positioning does not effectively differentiate you from your nearest competitors in competitive evaluations. When prospective clients compare you to alternatives, price becomes the primary decision criterion — because your positioning does not give them a compelling basis for choosing you on any other dimension. The result is a commercial environment where you win on price when your price is lowest and lose when it is not.</p><div class='action-label'>What to do this week</div><p>Map your three nearest competitors' positioning claims. What do they say about themselves? What do their clients say about them? Where is the overlap with your positioning? Every point of overlap is a point where you are competing rather than differentiating. Identify one genuine differentiator that no direct competitor can honestly claim and make it the center of your positioning.</p><div class='action-label'>Within 14 days</div><p>Build a competitive comparison narrative. Not a chart showing you winning on every dimension — a clear articulation of specifically who you are right for, who you are not right for, and what the specific difference is between your approach and the nearest alternative. This narrative disqualifies wrong clients and qualifies right ones without requiring a price comparison.</p><div class='action-label'>Within 30 days</div><p>Test your competitive positioning in one live evaluation. In your next competitive proposal situation, lead with your specific differentiation rather than your credentials. Observe whether the evaluation shifts from price-based to value-based. That shift is the commercial signal that your competitive positioning is working.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Your positioning differentiates you in some competitive dimensions but not in the ones that are most decisive for your highest-value prospective clients. You win competitive evaluations where your specific strengths align with the client's stated priorities — and lose when they do not. This suggests the positioning is genuine but not yet targeted precisely enough at the client profile that represents your highest commercial potential.</p><div class='action-label'>What to do this week</div><p>Analyze your last five competitive wins and five competitive losses. What did the wins have in common? What did the losses have in common? The pattern across those ten evaluations reveals the specific competitive dimension where your positioning needs to be sharpened.</p><div class='action-label'>Within 14 days</div><p>Align your positioning with your win conditions. The client profile, the situation type, and the decision criteria that produce your wins are your true target market. Sharpen your positioning to speak precisely to that profile, that situation, and those criteria — and let it naturally disqualify the evaluation types where you consistently lose.</p><div class='action-label'>Within 30 days</div><p>Build a switching cost narrative. What does a client lose by choosing a competitor instead of you — specifically, in terms they can feel? Switching cost language converts a pricing decision into a risk assessment — and risk assessment produces more careful decisions that favor the more credible option.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your competitive positioning is strong. In evaluations where the right prospective client is choosing, your differentiation is decisive. The opportunity at this level is in reach — ensuring your differentiated positioning is visible to more of the right prospective clients before the evaluation begins, so the competitive conversation starts from a position of authority rather than parity.</p><div class='action-label'>What to do now</div><p>Invest in pre-evaluation positioning. The most powerful competitive advantage is to enter an evaluation already known, already trusted, and already associated with the specific outcome the client needs — before the evaluation formally begins. That pre-evaluation reputation is built through geographic authority, digital presence, and the referral network of your most satisfied clients. Invest in all three deliberately.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 12 arrives next week — the final audit of the IMPACT Pillar.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 12 — Authority Coherence Review</div>
+      <em>Across all 12 audits — where is the largest gap between how you see yourself and how your market sees you?</em>
+      <p>The final audit of the IMPACT Pillar synthesizes all eleven previous findings into one sequenced intervention architecture. It identifies the pattern, ranks the gaps by commercial cost, and prescribes the first move that produces the greatest improvement in brand coherence across the Pillar.</p>
+    </div>
+    <div class="cta-block">
+      <p>If competitive positioning is allowing price to become the deciding factor in evaluations you should win on differentiation, the Futureproof™ Diagnostic maps the specific positioning corrections that shift competitive evaluations from price-based to value-based. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; IMPACT Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

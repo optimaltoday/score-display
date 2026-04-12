@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPTIMIZATION · Phase 2 · Audit 4 · Working Capital · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION · Optimal Operations &nbsp;·&nbsp; Phase 2 · Audit 4 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your operational coherence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 – 40</div><div class="band-desc">Your working capital cycle is visible, measured, and actively managed. Cash conversion is understood. The opportunity at this level is in accelerating the cycle — not fixing it.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 – 29</div><div class="band-desc">Some awareness of your cash cycle exists, but the measurement is incomplete. You know when cash is tight — but not structurally why, or how to predict it before it becomes a problem.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 – 18</div><div class="band-desc">Your working capital position is unmeasured. Cash flow surprises are routine. Money is locked in inventory, receivables, or timing gaps — and the cost of that lock-up is invisible.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 2 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 2 is Measurement. Awareness identified what exists. Measurement quantifies what it costs.</p><p>The OPTIMIZATION Pillar does not improve on instinct. It improves on data. Phase 1 established whether your business can see its financial structure. Phase 2 determines the precise cost of what Phase 1 found — in numbers, not impressions.</p><p>Three audits in Phase 2 examine the cash cycle, technology spend, and supplier cost concentration. Each one quantifies a specific category of money leak. Together, they give you the measurement baseline that makes Phase 3 — Diagnosis — structurally precise rather than directionally approximate.</p><p>Audit 4 begins with working capital — the most directly felt measurement in any operating business. If you have ever been profitable on paper while simultaneously short on cash, this audit names the structure behind that experience.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 4 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Working capital is the gap between money going out and money coming in.</p><p>Every business has one. The question is whether that gap is measured, managed, and understood — or whether it appears as a surprise every few months that requires urgent action.</p><p>A business can be profitable and cash-constrained simultaneously. Inventory sitting in a warehouse is money that has left the bank but not yet returned. Receivables outstanding past 60 days are money that has been earned but not collected. Payables due before collections arrive are timing gaps that consume cash without consuming profit. None of these show as losses. All of them cost money.</p><p>Audit 4 measures your cash conversion cycle and the structural gaps within it. The number it surfaces — how many days of cash are locked in your operating cycle — is one of the most commercially significant numbers in your business. Most owners do not know it.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 4 Diagnosis</div>
+    <div class="section-title">Working Capital</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of working capital management — cash conversion cycle visibility, receivables aging, inventory turnover, payables terms, seasonal cash pattern awareness, cash flow forecasting, working capital as a percentage of revenue, and financing cost of working capital gaps.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your working capital position is unmanaged. Cash flow surprises are a regular feature of your operating reality — not because your business is unprofitable, but because the timing of cash in and cash out has never been mapped.</p><p>Every day that receivables sit uncollected beyond your terms is a day you are financing your customers with your own capital — at zero interest, by default. Every week that inventory sits unmoved is a week of working capital locked without return. These are not accounting problems. They are structural ones.</p><div class='action-label'>What to do this week</div><p>Calculate your current receivables aging. How much is outstanding beyond 30 days? Beyond 60? That number is your immediate working capital recovery target.</p><div class='action-label'>Within 14 days</div><p>Implement a collections follow-up sequence for all receivables beyond 30 days. Phone call at 31 days. Written notice at 45. Escalation at 60. Make this a system, not a reaction.</p><div class='action-label'>Within 30 days</div><p>Calculate your inventory turnover rate. Any inventory sitting beyond your sector's average holding period is working capital that should be liquid. Identify the highest-value slow-moving stock and address it.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Some measurement exists. You have a general sense of your cash cycle. What you lack is the precise number — how many days of revenue are locked in your operating cycle at any given moment — and the system to reduce it.</p><p>At this level, the leak is in the gaps. Receivables that almost always collect within terms — except when they do not. Inventory that turns reasonably well — except for the slow-moving categories that tie up disproportionate capital.</p><div class='action-label'>What to do this week</div><p>Calculate your Days Sales Outstanding — total receivables divided by average daily revenue. Compare it to your stated payment terms. The gap is money you are owed but have not collected.</p><div class='action-label'>Within 14 days</div><p>Review your payables terms with your top three suppliers. If you are paying in 30 days and could negotiate 45, that 15-day extension on your highest invoices may free significant working capital.</p><div class='action-label'>Within 30 days</div><p>Build a 13-week cash flow forecast. Not a budget — a forecast of actual cash in and cash out by week. This is the single most powerful working capital management tool available and requires no software beyond a spreadsheet.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your working capital cycle is understood and actively managed. You know your cash conversion cycle. Receivables are tracked. Inventory turns at a rate aligned with your business model. Payables are optimized.</p><p>At this level, the opportunity is in acceleration — reducing your cash conversion cycle by days to free working capital that can be redeployed rather than locked in the operating cycle.</p><div class='action-label'>What to do now</div><p>Calculate the financial impact of reducing your cash conversion cycle by 10 days. On a business with significant revenue, that reduction may free more working capital than your current financing costs. That freed capital can fund growth without additional borrowing.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 5 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 5 — Technology Spend</div>
+      <em>What are you paying for in technology and tools — and what is it actually producing?</em>
+      <p>Working capital measures the cost of timing. Technology spend audit measures the cost of accumulation. Most businesses add tools faster than they review them. The result is a technology stack that grows in cost and complexity while delivering diminishing returns on the original investment.</p><p>Audit 5 maps what you are paying, what it produces, and what should be cut.</p>
+    </div>
+    <div class="cta-block">
+      <p>If your working capital position raised questions about your business's cash efficiency, the Futureproof™ Diagnostic quantifies the precise recovery opportunity and maps the structural corrections in sequence. It is a private 90-minute engagement producing a written one-page summary of your highest-priority gaps and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

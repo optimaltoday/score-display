@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPTIMIZATION · Phase 2 · Audit 5 · Technology Spend · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION · Optimal Operations &nbsp;·&nbsp; Phase 2 · Audit 5 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your operational coherence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 – 40</div><div class="band-desc">Your technology stack is largely audited, purposeful, and integrated. Cost is proportionate to output. The opportunity at this level is in deeper utilization — not addition.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 – 29</div><div class="band-desc">Some tools are actively used. Others are paid for by default. The stack has grown without a corresponding review of whether each tool still earns its cost in your current operational reality.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 – 18</div><div class="band-desc">Your technology spend is ungoverned. Subscriptions accumulate. Tools overlap. Many are paid for and rarely used. The cost is real; the return is theoretical.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 2 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 2 is Measurement. Each audit in this phase quantifies a specific category of operational cost — the precise financial impact of structural gaps identified in Phase 1.</p><p>Audit 4 measured the cost of your cash conversion cycle. Audit 5 measures a different category of cost: the technology and tool spend that accumulates silently in most businesses — added during periods of growth or problem-solving and rarely reviewed thereafter.</p><p>Technology spend is one of the fastest-growing cost categories in small and mid-size family businesses over the past five years. It is also one of the least reviewed. The result is a common pattern: significant monthly spend on tools that overlap in function, are used by one or two people, or have been replaced in practice by other solutions but continue to charge.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 5 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Technology costs are uniquely dangerous because they feel small individually and compound collectively.</p><p>A SaaS subscription at a modest monthly rate does not feel significant. Twelve such subscriptions at similar price points represent significant annual spend — for tools that may or may not be producing a return. At higher price points, the math compounds faster.</p><p>This audit does not ask whether technology is valuable. It asks whether each specific tool your business currently pays for is producing measurable value proportionate to its cost. That is a different question — and most businesses have not asked it systematically.</p><p>The second dimension this audit examines is utilization. A tool that is fully paid for and 20% utilized is 80% waste. Identifying underutilized tools is as valuable as identifying unused ones.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 5 Diagnosis</div>
+    <div class="section-title">Technology Spend</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of technology spend governance — complete stack inventory, utilization rates, functional overlap, integration effectiveness, cost-per-user analysis, tool consolidation opportunity, renewal review process, and shadow IT exposure.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your technology stack has never been audited as a complete system. Individual tools were added to solve specific problems. Whether those problems are still the same, whether the tool solved them, and whether the tool is still in active use — none of this has been reviewed systematically.</p><p>The most common finding in businesses at this level: 20–35% of technology spend is for tools that are either unused, underutilized, or functionally duplicated by another tool already in the stack. That spend produces zero return and could be eliminated in a single audit session.</p><div class='action-label'>What to do this week</div><p>Pull every technology-related charge from your last three months of bank and card statements. List each tool, its monthly cost, and its primary user. This inventory does not exist anywhere else — build it now.</p><div class='action-label'>Within 14 days</div><p>For each tool, ask three questions: Is it actively used weekly? Could another tool already in the stack do the same job? Does the cost justify the output? Any tool that fails two of three gets cancelled at its next renewal.</p><div class='action-label'>Within 30 days</div><p>Establish a renewal review process. Every subscription renewal — regardless of size — gets a 10-minute review before automatic payment. This single process prevents most future accumulation.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Some awareness of your technology stack exists. Major tools are known and used. The leak is in the periphery — the smaller subscriptions added for specific purposes that were never reviewed after the purpose was addressed, and the tools whose utilization has declined but whose billing continues.</p><div class='action-label'>What to do this week</div><p>Identify every tool in your stack used by fewer than 50% of its licensed users. Per-seat costs on underutilized platforms are the most immediately recoverable technology waste.</p><div class='action-label'>Within 14 days</div><p>Look for functional overlap. Do you have two tools that perform the same core function? Consolidation to the better-utilized tool typically recovers the full cost of the eliminated one and reduces operational complexity simultaneously.</p><div class='action-label'>Within 30 days</div><p>Negotiate annual terms for any tools you are paying monthly. Annual billing on the same tool typically saves 15–25% with no reduction in functionality.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your technology spend is largely purposeful and audited. Tools are utilized, integrated, and proportionate to their cost. The stack is not bloated.</p><p>At this level, the next question is not what to cut — it is what to deepen. Most businesses underutilize the tools they already own. A 20% improvement in utilization of your current stack produces more return than adding a new tool.</p><div class='action-label'>What to do now</div><p>Identify the one tool in your current stack that, if used at 80% of its documented capability, would most significantly improve an operational output. Invest in training that capability before adding anything new.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 6 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 6 — Supplier Cost</div>
+      <em>Are you being systematically overcharged — and do you have the data to negotiate?</em>
+      <p>Technology spend audit measured internal accumulation. Supplier cost audit measures external concentration. When a business has one or two dominant suppliers, the power in that relationship flows to the supplier — and pricing reflects it.</p><p>Audit 6 maps your supplier cost structure, identifies concentration risk, and surfaces the negotiation opportunities your current data either reveals or conceals.</p>
+    </div>
+    <div class="cta-block">
+      <p>If your technology spend audit surfaced costs that are difficult to justify, the Futureproof™ Diagnostic maps the full picture of operational money leak across your OPTIMIZATION Pillar — and sequences the corrections by impact. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMPACT · Phase 1 · Audit 3 · Customer Perception · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results &nbsp;·&nbsp; IMPACT · Congruent Branding &nbsp;·&nbsp; Phase 1 · Audit 3 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your brand coherence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 – 40</div><div class="band-desc">Your customers describe your business in terms that closely match your intended positioning. The impression you intend to create is the impression that is received. The gap between intent and perception is narrow.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 – 29</div><div class="band-desc">Customers recognize your business positively but describe it in generic terms — reliable, professional, experienced. The specific differentiating value you intend to communicate is not the value they articulate. The gap between what you mean and what they receive is suppressing referral quality and pricing power.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 – 18</div><div class="band-desc">Customers describe your business in ways that significantly diverge from your intended positioning. They emphasize the wrong things, use the wrong language, and refer you to the wrong people. The impression your business creates is not the one you are trying to create — and every transaction is priced against the wrong perception.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 1 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 1 is Awareness. This is its final audit — the most revealing of the three because it comes from the outside in rather than the inside out.</p><p>Audits 1 and 2 examined brand consistency and positioning — what you intend to communicate. Audit 3 examines customer perception — what is actually received. These are different measurements. And the gap between them is the most commercially significant data point in the IMPACT Pillar.</p><p>A business can have perfectly consistent branding and a clearly defined positioning and still fail to create the intended perception — because what reaches the customer is filtered through their existing beliefs, their prior experiences, and the specific way the business presents itself at each interaction. This audit surfaces that gap before it continues to suppress revenue.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 3 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Customer perception determines referral quality, pricing power, and market positioning — regardless of what the business intends.</p><p>If customers describe your business as generally good but cannot articulate specifically why you are the only right choice for their situation, they will refer you to anyone who needs something vaguely similar — not to the specific clients who would pay the most and benefit the most. Generic perception produces generic referrals. Generic referrals produce generic clients. Generic clients produce pricing pressure.</p><p>The customer perception audit breaks this cycle by surfacing exactly what impression your business creates — so you can close the gap between the impression you intend and the impression you produce.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 3 Diagnosis</div>
+    <div class="section-title">Customer Perception</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of customer perception — description accuracy versus intended positioning, differentiation articulation by customers, referral language quality, price resistance frequency and source, customer language versus business language alignment, unaided recall of key messages, perception consistency across customer segments, and satisfaction driver identification.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your customers' perception of your business significantly diverges from your intended positioning. They describe you in generic terms — or in terms that emphasize the wrong elements of your value. This means that every referral they generate is imprecise, every price they are willing to pay is calibrated against a generic perception, and every advocacy they provide reinforces the wrong impression in the market.</p><p>This is not a criticism of your customers. It is a signal that the impression your business creates is not the one you are trying to create. The gap is structural — and it is correctable.</p><div class='action-label'>What to do this week</div><p>Ask three current customers to describe your business to a hypothetical friend who has a problem your business solves. Record their exact language. Compare it to your positioning sentence from Audit 2. The gap between what they say and what you intend is your perception correction target.</p><div class='action-label'>Within 14 days</div><p>Identify the most common generic descriptor your customers use to describe you. That descriptor is the ceiling of your current perception. Now identify the specific, differentiated language you would prefer. The path from one to the other is your Phase 2 and 3 IMPACT correction roadmap.</p><div class='action-label'>Within 30 days</div><p>Introduce positioning language into your delivery. The most powerful brand education happens during the client relationship — when your clients are most engaged with your value. At key moments in your service delivery, articulate what you are doing and why in your positioning language. Clients adopt the language you teach them through experience.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Customers perceive your business positively but generically. They recognize your reliability, your competence, and your professionalism. They do not articulate your specific differentiation — which means their referrals are generic, their price expectations are moderate, and their advocacy reinforces a perception that does not command premium positioning.</p><div class='action-label'>What to do this week</div><p>Introduce one specific question at the end of your next three client engagements: how would you describe what we do and why it matters — in your own words? The language they use reveals exactly where your positioning is and is not landing. That language is your most valuable brand feedback.</p><div class='action-label'>Within 14 days</div><p>Identify your best referral sources — the clients who refer the most precisely aligned prospective clients. What do they say about you? How do they describe you to the people they refer? That description is your highest-performing positioning language. Use it deliberately in all future communications.</p><div class='action-label'>Within 30 days</div><p>Create a client language library. The specific phrases your best clients use to describe your value are more commercially powerful than any language you generate internally. Collect them, curate them, and integrate them into your communications, proposals, and website.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Customer perception closely aligns with your intended positioning. The impression you create is the impression you intend. Your customers articulate your differentiation, generate precise referrals, and provide advocacy that reinforces the correct market positioning.</p><p>At this level, the opportunity is in amplification — using your customers' language and testimony to extend your positioning reach into markets and relationships where you are not yet known.</p><div class='action-label'>What to do now</div><p>Build a structured testimony collection process. Your best customers' descriptions of your value are your most powerful positioning tools. Collect them formally — in writing, with their permission — and integrate them into your highest-visibility brand touchpoints. Authentic customer language outperforms any internally generated positioning claim.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Phase 1 is complete. Phase 2 begins next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Phase 2 — Measurement</div>
+      <em>What is brand incoherence actually costing you — in margin, in the wrong clients, and in invisible opportunity?</em>
+      <p>Phase 1 established the awareness picture: whether your brand is consistent, whether your positioning is clear, and whether your customers perceive you as you intend. Phase 2 measures the precise commercial cost of each gap — in pricing power, in internal authority, and in the differentiation that separates you from competitors.</p>
+    </div>
+    <div class="cta-block">
+      <p>If the gap between your intended positioning and customer perception is significant, the Futureproof™ Diagnostic maps the specific corrections that close it — and the commercial impact of closing it. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; IMPACT Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

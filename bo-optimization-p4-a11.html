@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPTIMIZATION · Phase 4 · Audit 11 · Operational Resilience · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION · Optimal Operations &nbsp;·&nbsp; Phase 4 · Audit 11 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your operational coherence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 – 40</div><div class="band-desc">Your business can withstand significant operational stress without catastrophic degradation. Key dependencies are identified, mitigated, and tested. Recovery from disruption is structured rather than improvised.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 – 29</div><div class="band-desc">Your business functions well under normal conditions. Under stress — key absence, system failure, demand spike — the structure reveals dependencies that have not been addressed. Recovery is slower and more expensive than it needs to be.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 – 18</div><div class="band-desc">Your business is operationally fragile. Disruption of any significant kind produces disproportionate impact because the operational structure was designed for ideal conditions, not stress conditions. Recovery is improvised and costly.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 4 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 4 is Prescription. Each audit in this phase translates the diagnostic picture from Phases 1–3 into specific, sequenced corrective direction.</p><p>Audit 10 addressed productivity under normal operating conditions. Audit 11 shifts the frame: what happens when conditions are not normal? The Futureproof™ definition — the capacity and capability to withstand, outlast, and transcend the impact of current and coming changes — is tested most directly by this audit. A business that performs well in normal conditions but collapses under stress has not been futureproofed.</p><p>Operational resilience is a structural design question — and it has a direct cost implication. Businesses that recover quickly from disruption lose less revenue per disruption event than those that recover slowly.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 11 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Every business has hidden dependencies. The question is whether yours are identified and mitigated — or whether they are discovered at the moment of failure.</p><p>Key person dependency is the most common. When the person who knows the system, holds the relationship, or makes the decision is unavailable — for any reason — the cost of that absence is paid by the business in delayed decisions, lost customers, and operational degradation. The cost is real. It is also entirely preventable through structural design.</p><p>System dependency is the second most common. Digital systems fail. Supply chains disrupt. Payment systems go offline. Businesses that have never planned for these events improvise under pressure. Businesses that have planned execute a known recovery sequence.</p><p>This audit does not ask whether disruption will come. It will. It asks whether your business is designed to absorb it — or merely to hope it does not arrive.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 11 Diagnosis</div>
+    <div class="section-title">Operational Resilience</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of operational resilience — key person dependency depth, system failure recovery time, supply chain disruption preparedness, demand spike capacity, documented continuity procedures, backup system availability, cross-training coverage, and historical disruption recovery performance.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your business has not been designed for disruption. Operational continuity depends on specific people, specific systems, and specific conditions remaining stable. When any of these are disrupted — and they will be — the impact is disproportionate because no structural preparation exists to absorb it.</p><p>ASEAN businesses operate in a region with documented political, weather, infrastructure, and supply chain disruption risk. The businesses that navigate this environment successfully are not those that avoid disruption — they are those that recover from it faster than their competitors.</p><div class='action-label'>What to do this week</div><p>Identify your three highest-impact single points of failure. These are the people, systems, or relationships whose removal would most severely disrupt your business. Write them down. This is the beginning of a resilience plan — not the completion of one.</p><div class='action-label'>Within 14 days</div><p>For each single point of failure: what would immediate action look like if that dependency failed today? If you cannot answer clearly in under two minutes, you do not have a recovery plan. Turn the hope into a plan.</p><div class='action-label'>Within 30 days</div><p>Begin cross-training at least one person for each critical operational function currently held by only one individual. The investment is measured in hours. The protection it provides is measured in business continuity during the next disruption.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Your business has some resilience infrastructure. Key dependencies are partially identified. Some cross-training exists. Recovery from minor disruption is manageable. The gap is in depth — the plan exists for small disruptions, but the structural preparation for significant disruption is incomplete.</p><div class='action-label'>What to do this week</div><p>Test your continuity plan. Not theoretically — actually. Have a key team member absent for a full day without prior notice to the people who depend on them. Observe what breaks, what routes to you, and what gets resolved independently. The test reveals the real resilience, not the assumed one.</p><div class='action-label'>Within 14 days</div><p>Review your critical supplier relationships for single-source dependency. Any input that comes from only one supplier — with no qualified alternative — is a supply chain resilience gap. Qualify one alternative for each critical single-source input.</p><div class='action-label'>Within 30 days</div><p>Document your operational continuity procedure for your highest-impact disruption scenario. One documented procedure is infinitely more useful than the intention to create one.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your business is operationally resilient. Dependencies are identified and mitigated. Continuity procedures exist and are tested. Recovery from disruption is structured. This is the operational standard that Futureproof Results require — the structural capacity to withstand what the environment will deliver.</p><p>At this level, the next horizon is stress-testing the plan against scenarios you have not yet experienced — not to become anxious about them, but to ensure the structure holds under conditions the current plan has not been designed for.</p><div class='action-label'>What to do now</div><p>Conduct an annual resilience review. What has changed in your operational dependencies since the last review? What new single points of failure have been created by growth, new hires, or system additions? Resilience that is not updated as the business changes is resilience that decays silently.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 12 arrives next week — the final audit of the OPTIMIZATION Pillar.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 12 — Coherence Review</div>
+      <em>Across all 12 audits — where is your biggest operational gap, and what closes it first?</em>
+      <p>The final audit of the OPTIMIZATION Pillar is not a new topic. It is a structured review of everything the previous 11 audits have surfaced — mapped against each other, ranked by cost and correctability, and translated into a clear first move.</p><p>Audit 12 closes the awareness-measurement-diagnosis-prescription cycle and points toward the Advisory engagement that builds what the audit cycle has mapped.</p>
+    </div>
+    <div class="cta-block">
+      <p>If operational resilience gaps are visible in your business, the Futureproof™ Diagnostic builds the structural continuity architecture specific to your business model, your dependencies, and your risk profile. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; OPTIMIZATION Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

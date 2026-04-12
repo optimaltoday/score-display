@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MULTIPLICATION · Phase 1 · Audit 3 · Scalability Audit · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof™ Architecture &nbsp;·&nbsp; 1K1 Advisory</div>
+  <div class="report-label">Futureproof™ Results &nbsp;·&nbsp; MULTIPLICATION · Replicable Value &nbsp;·&nbsp; Phase 1 · Audit 3 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">—</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your value coherence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 – 40</div><div class="band-desc">Your business has structural capacity to grow beyond your personal involvement. Key functions can be replicated, delivered, and managed without your direct presence at every step.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 – 29</div><div class="band-desc">Partial scalability exists. Some functions can be replicated. Others are structurally dependent on your personal involvement — and that dependency is the ceiling the business cannot grow past.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 – 18</div><div class="band-desc">Your business is structurally capped at your personal bandwidth. Revenue cannot grow beyond what you can personally deliver, supervise, or quality-control. The expertise that built the business is the same expertise that limits it.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 1 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 1 is Awareness. This is its final audit — and the one that most directly names the MULTIPLICATION challenge.</p><p>Audits 1 and 2 identified what you know and whether it is documented. Audit 3 asks the commercial consequence question: can the business grow without you doing more? Or does growth require your personal time, attention, and expertise at every additional unit of output?</p><p>If the answer is the latter — the business is not scalable in its current form. It is a consultancy with overhead. And the MULTIPLICATION Pillar exists precisely to change that structural reality.</p><p>Phase 1 ends here. The awareness picture is now complete: what you know, whether it is documented, and whether the business is structured to grow beyond you. Phase 2 measures the precise cost of each gap.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 3 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Scalability is not a technology question. It is a structure question.</p><p>A business scales when additional revenue can be generated without proportional additional input from the founder. A business does not scale when every new client, every new product, and every new market requires the founder's personal time to deliver. The difference between these two states is not ambition or effort — it is architecture.</p><p>This audit examines three dimensions of scalability simultaneously: delivery scalability — can others deliver what you deliver? System scalability — can the business handle more volume without breaking? Knowledge scalability — can what you know be taught, applied, and quality-controlled without your continuous presence?</p><p>The answers reveal the structural ceiling. They also reveal what needs to be built to raise it.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 3 Diagnosis</div>
+    <div class="section-title">Scalability Audit</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of business scalability — delivery replicability, quality control without founder presence, team capacity utilization, system load capacity, client acquisition without personal referral, geographic or market expansion feasibility, pricing power independent of founder relationship, and growth rate versus founder time correlation.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;·&nbsp; 8–18</div>
+      <p>Your business is structurally founder-bound. Revenue growth requires more of your time. Client acquisition depends on your personal relationships. Quality is maintained by your direct involvement. There is no structural mechanism that allows the business to produce more without you doing more.</p><p>This is not a criticism of what has been built. It is a description of a structure that was appropriate at one stage and is now the ceiling at the next. The ceiling is not a personal limitation. It is an architectural one — and architecture can be changed.</p><div class='action-label'>What to do this week</div><p>Calculate your personal revenue ceiling. How much revenue can you personally generate or oversee in a week, given your current involvement in delivery? Multiply by 50. That number is your current annual revenue ceiling — the maximum the business can reach without structural change. Compare it to your revenue goal. The gap is the MULTIPLICATION imperative.</p><div class='action-label'>Within 14 days</div><p>Identify the one function in your business that, if it could be reliably performed by someone other than you, would most increase the business's scalability. That function is your first MULTIPLICATION target.</p><div class='action-label'>Within 30 days</div><p>Map the steps required to make that function deliverable by someone else. What documentation is needed? What training? What quality standard? What oversight mechanism? This map is the beginning of your scalability architecture.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;·&nbsp; 19–29</div>
+      <p>Some scalability exists. Certain functions can be replicated and delivered without your direct involvement. The business can handle some growth without proportional founder time input. The gap is in the critical functions — the delivery, quality, or relationship elements that still require you personally and therefore set the ceiling.</p><div class='action-label'>What to do this week</div><p>Identify your scalability ceiling precisely. What is the maximum revenue the business could generate if your involvement stayed constant at its current level? What would need to change structurally for that ceiling to move? The answer to the second question is your MULTIPLICATION roadmap.</p><div class='action-label'>Within 14 days</div><p>For each function that still requires your direct involvement: what is the specific reason it cannot be delegated or replicated? Is it undocumented? Does it require a relationship only you hold? Does it require a judgment call only you can make? Each reason is a specific structural problem with a specific structural solution.</p><div class='action-label'>Within 30 days</div><p>Build one replication pathway for one founder-dependent function. Not the entire system — one pathway. Test it. Measure the quality of output against your personal standard. Adjust. This is how scalability is built — one replicated function at a time.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;·&nbsp; 30–40</div>
+      <p>Your business has meaningful scalability. Key functions can be replicated and delivered without your continuous involvement. The structural ceiling is higher than in most businesses at your stage. The opportunity at this level is in systematizing what works — converting the scalability that exists in practice into a documented architecture that can be deliberately extended.</p><div class='action-label'>What to do now</div><p>Document the replication mechanisms that are already working. Which functions are successfully delivered by others? What made that replication successful? The answer is a scalability framework — and a framework can be applied to the functions that are not yet replicated.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Phase 1 is complete. Phase 2 begins next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Phase 2 — Measurement</div>
+      <em>What is each value gap actually costing you — in precise, quantifiable terms?</em>
+      <p>Phase 1 established the awareness picture: what you know, whether it is documented, and whether the business can scale beyond you. Phase 2 measures the precise cost of each gap — in income that is not being generated, in value that is not being captured, and in the compounding cost of expertise that remains unstructured.</p><p>If Phase 1 revealed problems, Phase 2 puts numbers on them. If Phase 1 confirmed strength, Phase 2 identifies the next layer of multiplication opportunity.</p>
+    </div>
+    <div class="cta-block">
+      <p>If your scalability audit revealed a ceiling you want to raise, the Futureproof™ Diagnostic maps the exact structural changes required — sequenced by impact and feasibility. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof™ Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof™ Results &nbsp;·&nbsp; MULTIPLICATION Pillar</div>
+  <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>
