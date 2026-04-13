@@ -122,7 +122,7 @@
   <div class="footer-copy">© Futureproof Architecture™ &nbsp;·&nbsp; 1K1 Advisory &nbsp;·&nbsp; 1K1.uk &nbsp;·&nbsp; Strictly private circulation</div>
 </footer>
 <script>
-(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+(function(){var p=new URLSearchParams(window.location.search),s=p.get("score"),e=document.getElementById("sv");if(s&&!isNaN(parseInt(s,10))){e.textContent=parseInt(s,10);}else{var t=0,ok=true;for(var i=1;i<=8;i++){var v=parseInt(p.get("q"+i),10);if(isNaN(v)){ok=false;break;}t+=v;}if(ok)e.textContent=t;}})();
 </script>
 </body>
 </html>
