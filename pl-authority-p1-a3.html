@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTHORITY · Phase 1 · Audit 3 · Peer Perception · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">AUTHORITY &nbsp;&middot;&nbsp; Congruent Communications &nbsp;&middot;&nbsp; Phase 1 &nbsp;&middot;&nbsp; Audit 3 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your authority architecture in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">Your professional peers perceive your authority at the level your positioning intends. Those who occupy the same professional space recognise the specific expertise and contribution that distinguishes you. The perception is accurate, current, and aligned with where your professional function is heading.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">Peer perception is partial. Some professional peers accurately understand your authority position; others hold a picture that is out of date, incomplete, or based on earlier work that no longer represents your highest contribution. The perception is not coherently aligned with your current professional ceiling.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">Peer perception of your professional authority is unclear or inaccurate. You are known to your immediate professional circle but not in the specific authority terms that would place you at the level your expertise warrants. Peers may perceive you as a competent practitioner but not as a distinctive authority.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 1 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 1 is Awareness. Before authority can be deliberately built, its current expression — and the gaps in that expression — must be seen clearly.</p><p>The AUTHORITY Pillar addresses the professional dimension that determines how expertise is perceived in the market: congruent communication. A professional whose expertise is not matched by a coherent, consistent, and compelling professional authority signal will be systematically underrecognised — and underrecognised expertise is expertise that cannot command its ceiling price or open its ceiling doors. Phase 1 maps the current state of that signal.</p><p>Phase 1 concludes by examining the most direct test of professional authority communication: how professional peers — those who share your context and are therefore the most informed evaluators — perceive the authority you project.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 3 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Peer perception is the most structurally significant form of professional reputation, because peers are the professional community's internal validators. When peers recognise your authority, the recognition extends outward through their networks and referrals. When peers hold an inaccurate or outdated perception of your professional position, that misalignment is communicated outward with the same efficiency — and it creates a structural ceiling on the authority you can build in the wider market.</p><p>This audit examines the accuracy and currency of your professional peer perception — and where the gap between intended position and perceived position is most significant.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 3 Diagnosis</div>
+    <div class="section-title">Peer Perception</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of peer perception — peer recognition accuracy, authority level perception, expertise association clarity, peer referral behaviour, professional reputation currency, peer network coverage, perception gap identification, and peer community positioning.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>Peer perception of your professional authority is not well-understood or managed. You have a professional reputation in your immediate circle, but the specific authority level that your expertise and positioning warrant is not clearly recognised by the broader professional peer community. You may be known as a good practitioner without being known as a distinctive authority.</p>
+<p>The structural consequence is a referral gap: peers refer those they recognise as authorities to the opportunities, panels, engagements, and clients that require authority-level expertise. A professional who is known as a practitioner rather than an authority will not receive those referrals — not because the expertise is insufficient, but because the authority perception has not been built.</p>
+<div class='action-label'>What to do this week</div>
+<p>Identify ten professional peers — people who occupy the same professional space as you and who are likely to refer professional opportunities. For each: can you articulate how they currently perceive your professional authority? At what level do they place you — practitioner, specialist, authority, or recognised expert? The honest assessment of their current perception is your peer perception baseline.</p>
+<div class='action-label'>Within 14 days</div>
+<p>For the peers whose perception is most misaligned with your intended positioning — those who hold an outdated or incomplete picture of your professional authority — identify the specific reason for the misalignment. Is it that they have not seen your most recent work? That your positioning in shared contexts has not communicated your current expertise level? That the relationship predates your highest professional development? The specific cause determines the appropriate structural response.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Implement one peer perception correction for the highest-priority misalignment: share a recent piece of work, communicate a current methodology, or participate in a shared professional context in a way that demonstrates the authority level that peer is not yet recognising. Do not explain the gap — demonstrate the current standard.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>Peer perception is partially aligned. Some peers understand the professional position accurately; others hold pictures that are incomplete or out of date. The pattern of misalignment often follows a predictable structure: peers who engaged with you most recently hold the most accurate picture; peers from earlier in your professional development hold a picture frozen at an earlier career stage.</p>
+<div class='action-label'>What to do this week</div>
+<p>Map the recency of each peer relationship against the accuracy of their current perception of your professional authority. The correlation — older relationships, less accurate perception — is the structural evidence for a systematic peer perception updating strategy. The strategic question is: which outdated peer perceptions, if corrected, would produce the most significant extension of your professional authority in the market?</p>
+<div class='action-label'>Within 14 days</div>
+<p>Identify the three peer relationships where a perception update would produce the highest referral value — the peers whose networks, when they accurately understand your current authority level, would be most likely to generate high-value professional opportunity for you. Plan one interaction with each that demonstrates the current authority standard.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Execute the three planned peer interactions. Do not explain your positioning — let the quality of the work, the insight, or the contribution speak for itself. Peer perception is updated most durably through direct evidence of professional standard, not through self-description.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>Peer perception is accurately aligned with professional positioning. The professional peer community recognises your authority at the intended level. The opportunity at this level is in peer network expansion — whether the peer community that recognises your authority is large enough to generate the referral volume and opportunity access that your professional ceiling warrants.</p>
+<div class='action-label'>What to do now</div>
+<p>Map the peer networks adjacent to your current professional community — the professional associations, practice areas, industry sectors, and geographic markets where your expertise has direct relevance but where you are not yet known. Which of those adjacent communities, if they recognised your authority, would most significantly expand the ceiling of professional opportunity available to you? Identify one and build the structural entry point.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 4 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 4 &mdash; Pricing and Fee Authority</div>
+      <em>Do your fees communicate the authority level of your expertise — and are you leaving professional value on the table by pricing below the authority your market positioning warrants?</em>
+      <p>Phase 1 established the current expression of your professional authority. Phase 2 moves to measurement — beginning with the most direct market signal of authority: the fees or compensation you command, and whether they accurately reflect the authority your positioning claims.</p>
+    </div>
+    <div class="cta-block">
+      <p>If peer perception of your professional authority is not aligned with your intended positioning — and the result is referrals, opportunities, and engagement invitations below your professional ceiling — the Futureproof&trade; Diagnostic maps the peer perception gap and builds the specific strategy for closing it. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; AUTHORITY &nbsp;&middot;&nbsp; Congruent Communications</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

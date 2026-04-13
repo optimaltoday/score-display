@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTHORITY · Phase 2 · Audit 6 · Internal Influence · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">AUTHORITY &nbsp;&middot;&nbsp; Congruent Communications &nbsp;&middot;&nbsp; Phase 2 &nbsp;&middot;&nbsp; Audit 6 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your authority architecture in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">You hold clear authority within your professional environment. Your expertise is recognised and deferred to on the matters it is most relevant to. You can initiate, direct, and shape professional decisions in your domain with the ease of a recognised internal authority.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">Internal influence is partial. You are respected and your expertise is valued. But on some matters where your expertise is most relevant, the influence you exercise is less than your professional standing would suggest. There are internal authority gaps that limit your ability to implement what you know.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">Internal influence is weak or absent in key professional areas. Your expertise may be acknowledged, but it does not translate into the authority to initiate decisions, shape direction, or implement change in the professional environment where you operate.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 2 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 2 is Measurement. Authority that has not been measured cannot be strategically developed.</p><p>Awareness established the current expression of professional authority. Measurement now quantifies it — examining the specific signals by which authority is conveyed, the market contexts in which it is most and least effective, and the precise gap between the authority level the professional currently projects and the level their expertise warrants.</p><p>Phase 2 concludes by examining the internal dimension of professional authority — the influence held within the immediate professional environment, which is often the most immediate determinant of professional effectiveness and the most telling indicator of whether the authority architecture is functioning.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 6 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Internal influence is the daily expression of professional authority. It is not a formal title — it is the operational reality of whose expertise is sought, whose perspective shapes decisions, whose initiatives attract organisational support. A professional with high external authority but weak internal influence is a professional whose authority is theoretical rather than operational — recognised outside the organisation but not sufficiently leveraged within it.</p><p>This audit examines the gap between the professional authority your expertise warrants and the influence you actually exercise in the environments where you operate daily.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 6 Diagnosis</div>
+    <div class="section-title">Internal Influence</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of internal influence — decision-shaping capacity, expertise-deference rate, initiative authority, internal network quality, influence reach across functions, authority recognition pattern, internal positioning clarity, and professional standing measurement.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>Internal influence is weak relative to the expertise held. Your professional knowledge is present in the organisation or professional community, but it is not translating into the authority to initiate decisions, shape direction, or implement change at the level your expertise warrants.</p>
+<p>There is a specific structural reason this gap exists so commonly: internal influence requires both expertise and the deliberate architecture of that expertise's internal communication. A professional who is recognised externally but has not invested in the internal communication of their expertise — through the consistent demonstration of authoritative judgment in internal forums, through the building of internal professional relationships, through the visible articulation of professional position in the internal context — will find that internal influence lags external recognition.</p>
+<div class='action-label'>What to do this week</div>
+<p>Map your internal influence landscape. In which domains of decision-making within your organisation or professional community is your expertise consistently sought? In which domains where your expertise is most relevant is it not being sought? The gap between the two is your internal influence deficit.</p>
+<div class='action-label'>Within 14 days</div>
+<p>For the highest-priority internal influence gap — the domain where your expertise is most relevant and least operationally recognised — identify the specific structural reason. Is it because you have not made your expertise visible internally? Because internal relationships have not been built? Because the internal communication of your expertise has been inconsistent? The specific reason determines the appropriate structural response.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Implement one deliberate internal authority-building action: a contribution to an internal forum that demonstrates the application of your expertise to a live organisational challenge, a direct demonstration of professional judgment in a context where your authority is currently not recognised, or a structured engagement with an internal decision-maker who should be seeking your expertise but currently is not.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>Internal influence is partial. In some domains your authority is recognised and exercised effectively. In others — typically domains where your expertise is most recently developed, or where the internal relationships that support authority recognition have not been built — the influence falls short of what your expertise warrants.</p>
+<div class='action-label'>What to do this week</div>
+<p>Identify the single internal domain where your influence gap is most costly — where the absence of authority in that specific area is producing professional outcomes below what your expertise could deliver if operationally recognised. That domain is your priority internal influence development target.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Map the internal relationships that most directly affect authority recognition in your priority domain. Whose deference to your expertise in that domain would most significantly change the internal influence dynamic? Build one deliberate engagement with that person or group that demonstrates the application of your expertise to a problem or decision they care about.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Develop one internal authority signal in your priority domain: a structured contribution, a demonstrated judgment call, or a documented expertise application that becomes a reference point for internal recognition. Internal authority is built through the accumulation of visible expertise applications — not through self-assertion, but through the consistent demonstration of professional judgment at the level that generates deference.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>Internal influence is strong and well-exercised. Your expertise is recognised and operationally deferred to in the domains where it is most relevant. The opportunity at this level is in influence architecture extension — whether the internal authority that functions well in your primary domain can be extended to adjacent domains, or whether the professional community that recognises your authority internally can be used as a platform for building broader external authority.</p>
+<div class='action-label'>What to do now</div>
+<p>Identify the internal authority you have built and the external leverage it could generate. Internal recognition from a well-regarded professional community is one of the most credible sources of external authority — because it represents peer validation by those who have directly observed professional performance. How can the internal authority architecture you have built be deliberately converted into external professional recognition?</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 7 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 7 &mdash; Digital Professional Presence</div>
+      <em>Does your digital presence reinforce your professional authority — or is there a gap between the authority you claim in person and the impression your digital footprint creates?</em>
+      <p>Phase 2 measured the authority signals your professional practice produces. Phase 3 diagnoses the patterns within that authority architecture — beginning with the digital presence, which for most professionals today is the most frequently encountered and the most structurally significant element of the authority architecture.</p>
+    </div>
+    <div class="cta-block">
+      <p>If the internal influence you hold does not match the expertise you bring — and the result is a professional authority that is theoretical rather than operational in the environments where you work — the Futureproof&trade; Diagnostic identifies the specific internal authority gaps and builds the structural strategy for closing them. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; AUTHORITY &nbsp;&middot;&nbsp; Congruent Communications</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

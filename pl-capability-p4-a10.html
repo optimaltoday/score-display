@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAPABILITY · Phase 4 · Audit 10 · Career Asset Value · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">CAPABILITY &nbsp;&middot;&nbsp; Structured Expertise &nbsp;&middot;&nbsp; Phase 4 &nbsp;&middot;&nbsp; Audit 10 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your expertise architecture in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">You have a clear, structured view of your expertise as a career-defining professional asset. You know its current value, its development trajectory, and the architectural decisions required to maximise its return over the remaining span of your professional career.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">Your expertise is recognised as valuable but has not been formally assessed as a professional asset with a calculable value and a development trajectory. Career decisions are made with general awareness of expertise value rather than specific architectural intelligence.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">Your expertise is not viewed through the lens of professional asset value. Career decisions are made on the basis of opportunity, compensation, and interest — without a structured view of how each decision affects the total value of the expertise asset being built.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 4 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 4 is Prescription. The full picture of your expertise architecture is now visible. The question is what changes.</p><p>Phase 4 translates the diagnostic intelligence of the preceding nine audits into a structured capability prescription: the specific architectural changes that will close the gap between the expertise you currently hold and the professionally organised, protected, and scalably deployed capability that represents the ceiling of your CAPABILITY Pillar potential.</p><p>Phase 4 begins with the most comprehensive view of your expertise: its total value as a professional career asset — the accumulated intellectual capital that represents the return on decades of professional development and the foundation on which the remaining career trajectory will be built.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 10 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Professional expertise is a career asset — one that can be deliberately developed, strategically deployed, and managed for maximum long-term return. Most professionals do not manage their expertise as an asset. They manage their career as a series of roles or projects, accumulating expertise as a byproduct of the work rather than as a deliberate investment with a calculated return.</p><p>Career asset value thinking asks a different set of questions: what is the total professional value of the knowledge I hold, how is it developing over time, which career decisions grow it and which dilute it, and am I managing the asset with the intentionality its value warrants?</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 10 Diagnosis</div>
+    <div class="section-title">Career Asset Value</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of career asset value — expertise accumulation rate, asset development intentionality, professional capital inventory completeness, career decision architecture, expertise depreciation risk, asset value trajectory, professional return optimisation, and career asset management.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>Your expertise is not managed as a professional asset. Career decisions — which roles to take, which projects to lead, which expertise to develop, which opportunities to pursue — are made without a structural view of how each decision affects the total value of the expertise being built.</p>
+<p>The structural consequence over a career is random rather than deliberate expertise accumulation: some highly valuable expertise is built, but the full potential of a deliberately architected professional capital portfolio is not realised. The professional who manages expertise as an asset ends their career with a fundamentally different professional position than the one who managed it as a byproduct.</p>
+<div class='action-label'>What to do this week</div>
+<p>Estimate the total market value of your current expertise — not your income, but the market value of the knowledge asset itself. What would it cost a major organisation to replicate your specific expertise portfolio through hiring, training, and development? This estimate is your career asset baseline. It is almost certainly higher than your current income would suggest.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Review the last five significant career decisions you made — role changes, project choices, expertise development investments. For each: did the decision grow your career asset value, maintain it, or dilute it? The pattern tells you whether your career decisions have been managed with asset intentionality or without it.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Identify the next significant career decision approaching — a role change, a project selection, a development investment. Evaluate it explicitly against the career asset lens: which option produces the greatest growth in the value of the expertise asset? Weight that evaluation alongside the conventional criteria of compensation and interest.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>Career decisions are made with general awareness of expertise value — you recognise that some choices build valuable expertise and some do not. The structural gap is in precision: the decision-making is not against a calculated asset value and a specific development trajectory, but against a general sense of professional direction. The expertise is growing, but the growth rate and direction are not architecturally managed.</p>
+<div class='action-label'>What to do this week</div>
+<p>Build a simple career asset map: your expertise domains on one axis, the current depth on another, and the market value of each domain on a third. Which domains are deep and highly valued? Which are shallow despite being high-value? Which are deep but declining in market relevance? The map is the basis for strategic expertise investment decisions.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Identify the one expertise domain where targeted development investment over the next 12 months would produce the highest increase in career asset value. Not the domain you enjoy most or the one most immediately applicable to your current role — the one where the marginal value of additional depth is highest relative to the investment required.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Build a 12-month expertise development plan for your identified domain: specific learning investments, application opportunities, and knowledge-building activities. Frame it as an asset development plan — with an expected return on the investment expressed in terms of career asset value, not just professional interest.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>Career asset value is actively managed. Expertise development is deliberate, trajectory-directed, and assessed against a clear view of professional capital return. The opportunity at this level is in long-range asset planning — moving from annual development planning to a multi-decade perspective on the expertise asset, ensuring that the architecture being built serves not just the current professional function but the professional legacy you intend to create.</p>
+<div class='action-label'>What to do now</div>
+<p>Map the terminal value of your expertise asset — the professional position, recognition, and contribution you intend your expertise to have produced by the end of your career. What is the distance between the current trajectory and that terminal value? Which development investments today would most significantly close that distance? The long-range plan is the highest-leverage CAPABILITY architectural decision — because it shapes every smaller decision made beneath it.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 11 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 11 &mdash; Succession Capability</div>
+      <em>If you were unavailable for 90 days, what of your professional capability could continue without you — and what structural measures would that require?</em>
+      <p>Career Asset Value established the total professional capital you hold. Succession Capability examines the transferability and resilience of that capital — whether the expertise your function depends on is architecturally transferable, or whether it would be unavailable the moment you were.</p>
+    </div>
+    <div class="cta-block">
+      <p>If the professional value of your expertise is not being managed as a deliberate career asset — and career decisions are being made without a structured view of how each choice develops or dilutes the expertise portfolio — the Futureproof&trade; Diagnostic builds the career asset map and the expertise development strategy. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; CAPABILITY &nbsp;&middot;&nbsp; Structured Expertise</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

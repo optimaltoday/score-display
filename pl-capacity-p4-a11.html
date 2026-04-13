@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAPACITY · Phase 4 · Audit 11 · Sustainability Architecture · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">CAPACITY &nbsp;&middot;&nbsp; Optimal Operations &nbsp;&middot;&nbsp; Phase 4 &nbsp;&middot;&nbsp; Audit 11 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your capacity architecture in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">Your professional capacity is architecturally sustainable. The level of output you currently produce can be maintained over a multi-year horizon without structural degradation. Performance and recovery are in structural balance. The architecture is built for the distance, not just the current demand.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">Current output is partially sustainable. Some aspects of your capacity architecture will not hold at current intensity without structural correction. The architecture is performing under current conditions but has identifiable fragility points that will become critical under sustained pressure.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">Current output is structurally unsustainable. The capacity being consumed to produce current performance exceeds what can be regenerated. The deficit is accumulating. Without structural correction, degradation is predictable — not possible, predictable.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 4 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 4 is Prescription. Clarity without a structural response is incomplete.</p><p>The awareness has been built. The measurements have been taken. The patterns have been diagnosed. Phase 4 translates that architectural intelligence into a coherent structural prescription: the specific changes, sequenced in priority order, that close the gap between the professional capacity you currently have and the professional capacity your function requires to perform at its structural potential.</p><p>Phase 4 examines the sustainability of the architecture being built — whether the current and intended structure of professional capacity will hold over a multi-year horizon, not merely under present conditions, and what structural modifications are required to ensure it does.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 11 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>The standard for professional capacity is not whether it performs today. It is whether it performs across the career horizon you intend. A capacity architecture built for current demands but not for sustained operation is a high-performance structure with a structural fragility — one that performs until it doesn't, and when it fails, fails significantly.</p><p>Most professionals do not examine sustainability until a crisis forces the examination. This audit builds the sustainability assessment before the crisis — examining whether the architecture you are operating is built for the distance, and identifying the structural modifications required to make it so.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 11 Diagnosis</div>
+    <div class="section-title">Sustainability Architecture</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of sustainability architecture — multi-year performance viability, fragility point identification, intensity-recovery balance, structural resilience, career horizon alignment, degradation risk assessment, sustainability measurement, and long-term architecture design.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>The current capacity architecture is not structurally sustainable at its present intensity. The capacity being consumed to produce current output exceeds what the regeneration architecture can restore. The deficit is accumulating — in recovery quality, in relational reserves, in the cognitive ceiling available for high-stakes professional work.</p>
+<p>The structural failure mode of an unsustainable capacity architecture is not a single visible event. It is a slow, progressive degradation: of output quality, of relational capacity, of the resilience available for high-pressure periods, and ultimately of the ability to perform at the level the professional function demands. The time to address it is before the degradation is significant — not after.</p>
+<div class='action-label'>What to do this week</div>
+<p>Perform a sustainability stress test. If your current professional architecture — the commitments, the recovery structure, the intensity level, the boundary architecture — were sustained without modification for the next three years, what is the most likely structural failure point? Name it specifically. Where is the architecture most fragile under sustained operation?</p>
+<div class='action-label'>Within 14 days</div>
+<p>For the identified structural fragility point: what is the minimum structural modification that would move it from fragile to resilient? Not the ideal architecture — the minimum structural change that prevents the most likely failure mode. That is your sustainability priority intervention.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Implement the minimum sustainability intervention identified above. Then perform the stress test again. With that modification in place, what is the next most likely structural failure point at sustained intensity? Work through the sustainability fragility points in sequence, beginning with the most critical.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>The architecture is performing under current conditions but contains identifiable fragility. Some dimensions are sustainable; others are not. The fragility points are present but have not yet produced visible degradation — because conditions have been manageable, pressure has not been sustained at peak intensity, or recovery has been adequate in the intervals between demanding periods.</p>
+<div class='action-label'>What to do this week</div>
+<p>Identify the specific fragility points in your current capacity architecture. Which elements hold at current intensity but would not hold at 20% higher sustained intensity? Which recovery structures are adequate in normal periods but insufficient in demanding ones? Name each fragility point with precision.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Rank the identified fragility points by failure consequence: which would produce the most significant professional impact if it failed? That fragility point is your first sustainability intervention — not because it is most likely to fail first, but because the cost of its failure is highest.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Implement one structural reinforcement for your highest-consequence fragility point. The reinforcement should change the structural condition — not create a contingency plan for managing the failure when it occurs, but change the architecture so the failure is less likely to occur.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>The professional capacity architecture is structurally sustainable. Performance and recovery are in balance. The fragility points have been identified and addressed. The opportunity at this level is in multi-year architecture evolution — planning the structural changes required for the professional function you intend to operate at over the next five to ten years, and ensuring the current architecture is building toward that horizon.</p>
+<div class='action-label'>What to do now</div>
+<p>Map the professional function you intend to operate at in five years — the level, scope, and type of contribution. Compare it to the current capacity architecture. What structural investments in capability, relationship, recovery, and capacity would build the architecture capable of sustaining that function? The gap between the current architecture and the intended one is your long-term development plan. Begin one element of it now.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 12 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 12 &mdash; Capacity Coherence Review</div>
+      <em>Across all twelve dimensions of your CAPACITY Pillar, where does the architecture hold — and where is incoherence still limiting what it can produce?</em>
+      <p>Sustainability Architecture established whether the architecture will hold over time. The Capacity Coherence Review examines all twelve dimensions together — as a system — to identify the structural incoherence that remains and the single highest-leverage intervention not yet made. Individual dimensions have been addressed. The final audit asks whether they are working as an integrated architecture or as a collection of independently improved parts.</p>
+    </div>
+    <div class="cta-block">
+      <p>If the current professional capacity architecture contains structural fragility points that will not hold at sustained intensity — and the long-term career trajectory depends on an architecture built for the distance — the Futureproof&trade; Diagnostic identifies the specific sustainability modifications required and sequences them by urgency and structural impact. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; CAPACITY &nbsp;&middot;&nbsp; Optimal Operations</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

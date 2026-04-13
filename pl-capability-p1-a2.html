@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAPABILITY · Phase 1 · Audit 2 · Knowledge Documentation · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">CAPABILITY &nbsp;&middot;&nbsp; Structured Expertise &nbsp;&middot;&nbsp; Phase 1 &nbsp;&middot;&nbsp; Audit 2 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your expertise architecture in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">Your expertise is captured in structured, accessible form. Key methodologies, frameworks, and professional judgments are documented with sufficient depth to be transferred, protected, and deployed without requiring your personal presence in every instance.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">Some knowledge is documented — processes, templates, reference materials. But the deeper layer of your expertise — the judgment calls, the diagnostic reasoning, the pattern recognition built over years — remains undocumented and therefore unavailable to anyone but you.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">Your expertise is almost entirely undocumented. It exists in your experience and judgment, accessible only through your direct involvement. If you were unavailable, the expertise would be unavailable with you.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 1 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 1 is Awareness. Before expertise can be structured as a professional asset, its current form, scope, and value must be seen clearly.</p><p>The CAPABILITY Pillar addresses the professional currency that determines your market value, your replaceability, and your ceiling as a practitioner or leader: structured expertise. Most professionals possess significant expertise that is not architecturally organised — it exists in practice but not in a form that can be precisely valued, communicated, protected, or deployed at scale. Phase 1 establishes the inventory from which all subsequent architectural decisions are made.</p><p>Phase 1 continues by examining whether the expertise identified in the inventory exists in any form that outlasts a single engagement — whether your professional knowledge has been captured, or whether it exists only inside you.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 2 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Undocumented expertise has a structural ceiling. It can only be deployed at the speed of one person, in one place at a time. It cannot be transferred without that person being present. It cannot be protected without secrecy. And it cannot be priced above what the market believes one person's time is worth.</p><p>Documentation does not mean turning expertise into a manual. It means creating the structural representations — frameworks, decision trees, diagnostic tools, case narratives — that allow the knowledge to exist and function in a form that is accessible, transferable, and deployable beyond the individual who holds it.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 2 Diagnosis</div>
+    <div class="section-title">Knowledge Documentation</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of knowledge documentation — methodology capture completeness, decision logic articulation, framework development, tacit knowledge externalisation, documentation accessibility, knowledge transfer readiness, documentation currency, and structural knowledge architecture.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>Your expertise is undocumented. The professional knowledge accumulated over years of practice exists exclusively in your judgment — and judgment that has not been externalised cannot be scaled, protected, or transferred. Every engagement requires your full personal presence because no structural representation of your expertise exists that could operate without you.</p>
+<p>The structural consequence extends beyond scalability. Undocumented expertise is also difficult to price accurately — because what cannot be seen cannot be valued. And it cannot be protected, because knowledge that exists only in a person cannot be established as proprietary.</p>
+<div class='action-label'>What to do this week</div>
+<p>Choose one methodology you use regularly — a diagnostic approach, a decision framework, a sequence of questions you ask in a particular context — and write it down. Not as a manual, but as a structured description: what triggers this approach, what steps does it involve, what does each step produce, and what is the decision logic at each stage? This first documentation exercise reveals both the depth of what you hold and the structural gaps in it.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Identify the three professional contexts in which your judgment is most consistently valuable — situations where clients, colleagues, or organisations have most reliably benefited from your specific way of thinking through a problem. For each: can you describe the reasoning architecture you use? If not, that architecture is your documentation priority.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Produce one structured framework from the reasoning architecture you use most frequently. It does not need to be complete or polished. It needs to be externally readable — a colleague with equivalent professional experience should be able to follow its logic without your being present to explain it.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>Some knowledge is documented. Process-level documentation — templates, checklists, reference materials — exists and is accessible. The gap is in depth: the documentation captures what is done but not why it is done that way, and therefore does not transfer the professional judgment that makes the documented process produce results at the level your expertise enables.</p>
+<div class='action-label'>What to do this week</div>
+<p>Review your existing documentation against one test: could a competent professional use it to produce results at 80% of your standard without access to you for guidance? If the answer is no, the documentation is capturing process but not judgment. Identify the specific point in your documented methodology where judgment diverges from procedure — that divergence is the documentation gap.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Begin documenting the judgment layer. For one of your core methodologies: what are the decision points at which a trained practitioner would make a different call than you? What are you seeing, weighting, or concluding that the documentation does not currently make explicit? That layer is where the highest-value documentation work is concentrated.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Produce one documented case study from a high-value engagement — not a marketing case study, a structural one. What was the presenting problem, what was your diagnostic reasoning, what did you see that was not immediately obvious, what was the intervention, and what changed? This documentation format captures judgment in a form that is both transferable and protectable.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>Knowledge documentation is architecturally present. Methodologies, frameworks, and judgment patterns are captured in forms that can be accessed and used beyond your direct presence. The opportunity at this level is in documentation leverage — examining whether the documentation you have created is being actively used to extend the reach of your expertise, or whether it is sitting in a folder without structural deployment.</p>
+<div class='action-label'>What to do now</div>
+<p>Audit the deployment of your existing documentation. Is it being used in client engagements, in team development, in positioning materials, or in the design of scalable offerings? Documentation that is not actively deployed is documentation that is not yet producing its structural return. Identify one piece of existing documentation that could be redeployed in a higher-value context this month.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 3 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 3 &mdash; Capability Scalability</div>
+      <em>Can the expertise you hold produce professional value beyond the hours you personally deliver — and is any structural mechanism for that scale currently in place?</em>
+      <p>Knowledge Documentation established whether your expertise exists in transferable form. Capability Scalability examines whether that expertise can be deployed at a scale that exceeds your personal delivery capacity — and whether any structural mechanism for doing so is currently in place.</p>
+    </div>
+    <div class="cta-block">
+      <p>If your professional expertise is undocumented and therefore inextricably tied to your personal presence in every engagement, the Futureproof&trade; Diagnostic identifies the highest-priority documentation work and the structural architecture for capturing what you know in a form that extends its reach. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; CAPABILITY &nbsp;&middot;&nbsp; Structured Expertise</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

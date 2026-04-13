@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INSIGHT · Phase 2 · Audit 4 · Career Ceiling · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">INSIGHT &nbsp;&middot;&nbsp; Constructive Patterns &nbsp;&middot;&nbsp; Phase 2 &nbsp;&middot;&nbsp; Audit 4 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your pattern intelligence in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">You have a clear view of the structural ceiling on your professional progression — whether one exists and if so, precisely what is producing it. Where a ceiling exists, it has been diagnosed at the structural level and an active intervention is in place.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">You sense a ceiling on professional progression but have not diagnosed its structural cause with precision. The sense that something is limiting advancement is present; the structural mechanism — what specifically is producing the constraint — has not been identified.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">A career ceiling exists but has not been recognised as a structural condition. The plateau in professional progression or professional income is attributed to market conditions, timing, or circumstance rather than to an identifiable structural mechanism that is producing the constraint.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 2 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 2 is Measurement. A pattern that has not been measured has not been understood at the structural level.</p><p>Phase 1 made the patterns visible. Phase 2 takes the next step: measuring their cost, their frequency, and their structural origin with the precision that makes targeted intervention possible. The difference between a pattern that is recognised and a pattern that is managed is measurement — the ability to state specifically what the pattern costs, how often it appears, and what conditions reliably produce it.</p><p>Phase 2 begins with the most directly career-consequential structural condition in the INSIGHT Pillar: the career ceiling — the structural mechanism that, if present, is actively constraining professional progression regardless of how much effort or capability is being directed toward advancement.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 4 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>A career ceiling is not a market condition — it is a structural one. It is produced by a specific mechanism: a skill gap, a relationship gap, a positioning gap, a pattern of behaviour that consistently prevents advancement past a certain level, or a structural belief that closes off the professional paths that would bypass the ceiling. Most career ceilings are invisible from inside them because the professional inside the ceiling is focused on managing the consequences of the constraint rather than examining the constraint itself.</p><p>This audit examines whether a career ceiling exists and, if it does, what structural mechanism is producing it.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 4 Diagnosis</div>
+    <div class="section-title">Career Ceiling</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of career ceiling — progression plateau identification, ceiling mechanism analysis, advancement barrier mapping, structural constraint recognition, ceiling cost calculation, ceiling duration assessment, intervention potential, and structural ceiling removal pathway.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>A career ceiling exists but has not been identified as a structural condition. The plateau in professional progression — the level at which advancement has stalled, the income ceiling that has not moved despite continued professional development, the professional positions that have remained inaccessible despite apparent qualification — is being experienced as a market reality or a timing problem rather than as a structural condition with an identifiable and addressable cause.</p>
+<p>The cost of misattribution is that the real cause of the ceiling is never addressed. Market conditions and timing are accepted as explanations and the professional waits for them to change. The structural mechanism that is actually producing the ceiling continues to operate, and the ceiling remains in place regardless of what the market does.</p>
+<div class='action-label'>What to do this week</div>
+<p>Conduct a ceiling audit. Identify the level at which your professional progression has most recently plateaued — the position, income level, or professional opportunity category that you have been unable to advance past despite continued investment in professional development. Now ask the structural question: what would someone at the next level need to have — in capability, in relationships, in positioning, in pattern — that you do not currently have? The gap between what they have and what you have is your ceiling mechanism.</p>
+<div class='action-label'>Within 14 days</div>
+<p>For the identified ceiling mechanism: is it a capability gap (a specific expertise or skill that the next level requires and you do not yet hold)? A relationship gap (a specific professional connection or sponsorship that the next level requires and you have not built)? A positioning gap (a professional reputation or recognition in a specific community that the next level requires)? Or a pattern gap (a recurring behaviour that is consistently working against advancement)? Naming the category precisely is the prerequisite for the structural intervention.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Design and begin implementing the structural intervention for the identified ceiling mechanism. The intervention is specific to the mechanism: a capability development plan for a capability gap, a relationship building strategy for a relationship gap, a positioning campaign for a positioning gap, or a pattern interruption architecture for a pattern gap. The ceiling will not move until the mechanism that is producing it is directly addressed.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>A ceiling is sensed but not structurally diagnosed. The feeling of constraint — that professional advancement has stalled, that opportunities are consistently not materialising at the expected rate, that the professional ceiling is lower than the capability would warrant — is present. The structural mechanism responsible for the constraint has not been identified with precision.</p>
+<div class='action-label'>What to do this week</div>
+<p>Apply the ceiling mechanism framework to your specific situation. For each of the four mechanism categories — capability, relationship, positioning, pattern — assess whether it is a significant contributor to the ceiling you are experiencing. Be honest about the assessment: the mechanism that is most uncomfortable to acknowledge is often the most structurally significant.</p>
+<div class='action-label'>Within 14 days</div>
+<p>For the mechanism identified as the primary contributor: what is the specific, minimum structural change that would begin to remove the constraint? Not the ideal path to the next level — the minimum structural change that would create movement where currently there is none. That minimum change is the highest-priority structural action.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Implement the minimum structural change and assess the result at 30 days. Has the ceiling begun to move? If not, is the structural change addressing the real mechanism or a more comfortable proxy for it? The honest assessment of the result is the most important 30-day output.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>The career ceiling has been identified and is being structurally addressed. The mechanism is known and the intervention is active. The opportunity at this level is in ceiling removal architecture — ensuring that the structural change being implemented is sufficient to fully remove the ceiling, not just to create temporary movement, and that the conditions for the next ceiling are not already being inadvertently built.</p>
+<div class='action-label'>What to do now</div>
+<p>Project forward: if the current ceiling mechanism is successfully addressed, what is the structural condition most likely to produce the next ceiling? Ceiling-aware professionals build the intervention for the next ceiling before the current one has fully resolved — because the gap between ceiling removal and the next ceiling's activation is the moment of maximum professional advancement opportunity, and it is typically brief.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 5 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 5 &mdash; Relationship Patterns</div>
+      <em>What recurring patterns govern the professional relationships you build — and are those patterns producing relationships that advance or limit your professional potential?</em>
+      <p>Career Ceiling examined the structural constraint on professional progression. Relationship Patterns examines the dimension of professional life that most directly determines the quality of professional opportunity available: the recurring patterns in how professional relationships are formed, maintained, and ended.</p>
+    </div>
+    <div class="cta-block">
+      <p>If a career ceiling exists but its structural mechanism has not been diagnosed — and the plateau in professional progression is being attributed to external conditions while the real structural cause continues to operate — the Futureproof&trade; Diagnostic identifies the ceiling mechanism and builds the structural removal pathway. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; INSIGHT &nbsp;&middot;&nbsp; Constructive Patterns</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

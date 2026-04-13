@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAPACITY · Phase 2 · Audit 4 · Capacity Measurement · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">CAPACITY &nbsp;&middot;&nbsp; Optimal Operations &nbsp;&middot;&nbsp; Phase 2 &nbsp;&middot;&nbsp; Audit 4 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your capacity architecture in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">You have a clear, current picture of your professional capacity — what you are committed to, what it costs, what your actual output ceiling is, and how close you are to it. Decisions about additional commitments are made against measured capacity, not felt pressure.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">Some awareness of capacity load exists. You have a general sense of being close to full or having room. But the measurement is not precise — commitments are estimated rather than calculated, and the available margin is unclear until it disappears.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">Capacity is not measured. Commitments accumulate without reference to a clear ceiling. The point of overcommitment is discovered at the moment of degraded output or failure to deliver — not before.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 2 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 2 is Measurement. What cannot be quantified cannot be managed with precision.</p><p>Awareness established the structural picture. Measurement goes further: it builds the specific data that makes structural intervention precise rather than general. Most professionals who feel at capacity cannot state — with precision — what they are committed to, what that commitment costs, or how close they are to their actual ceiling. Phase 2 closes that gap.</p><p>Phase 2 begins by measuring what most professionals have never formally calculated: the actual state of their professional capacity — commitments, cost, ceiling, and the margin remaining before the architecture is in deficit.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 4 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>You cannot manage what you cannot measure. Most professionals have a felt sense of whether they are at capacity — a sense of pressure, of busyness, of strain — but that felt sense is not a structural measurement. It does not tell you which commitments are consuming the most capacity, what your actual output ceiling is, how much margin you have before degraded performance, or where the highest-value adjustments can be made.</p><p>This audit measures professional capacity with the precision that structural management requires — converting a felt condition into a calculable one.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 4 Diagnosis</div>
+    <div class="section-title">Capacity Measurement</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of capacity measurement — commitment inventory accuracy, load calculation precision, output ceiling awareness, margin visibility, overload detection timing, capacity utilisation data, commitment cost mapping, and decision-support measurement.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>Professional capacity is being managed by feel rather than by measurement. Commitments are accepted without reference to a calculated ceiling. The load is known only by the strain it produces — and by the time that strain is felt, the ceiling has already been exceeded.</p>
+<p>The structural consequence is that capacity decisions are reactive: made in response to visible pressure rather than against a clear architectural picture. The overcommitment cycle that awareness has identified is being maintained, in part, by the absence of measurement that would make it visible before it becomes a crisis.</p>
+<div class='action-label'>What to do this week</div>
+<p>Build a commitment inventory. List every professional commitment currently consuming your time, energy, or attention — roles, projects, relationships, recurring obligations, and informal commitments. Assign each a weekly hour cost. The total is your current committed load. Compare it to your available professional hours. If the result is negative, you are already in structural deficit.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Rank your commitments by value delivered relative to capacity consumed. Which produce the highest return per hour of capacity? Which consume significant capacity while producing low or replaceable value? This ranking is your structural optimisation map.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Using the measurement built over the past two weeks, make one capacity decision that would not have been made without the data: either decline a new commitment on the basis of measured load, or identify one existing commitment to restructure, reduce, or exit.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>Some capacity measurement exists. The load is tracked informally and the general state of the capacity architecture is understood. The gap is precision — the informal measurement is sufficient to prevent the most severe overcommitment but insufficient to support fine-grained structural decisions about where capacity can be optimised.</p>
+<div class='action-label'>What to do this week</div>
+<p>Convert your informal capacity awareness into a formal measurement. Build the commitment inventory described above and assign hour costs. The goal is to answer one question with precision: how much capacity margin do I currently have, expressed in hours per week?</p>
+<div class='action-label'>Within 14 days</div>
+<p>Identify the two commitments in your current inventory that consume the most capacity relative to the value they produce. These are your first optimisation targets. What would it mean to restructure, reduce, or exit either one — and what capacity would that release for higher-value deployment?</p>
+<div class='action-label'>Within 30 days</div>
+<p>Review your capacity measurement against commitments accepted over the past 90 days. How many were accepted on the basis of measured capacity versus felt availability? The answer tells you whether measurement is currently influencing decisions or merely running in parallel with intuitive ones.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>Capacity measurement is precise and current. The structural picture is clear. Commitments are managed against a calculated ceiling rather than a felt sense of pressure. The opportunity at this level is in dynamic measurement — not just knowing the current state, but tracking how capacity shifts across the year and using that data to make forward-looking structural decisions.</p>
+<div class='action-label'>What to do now</div>
+<p>Build a quarterly capacity review into your professional architecture. Assess the full commitment inventory, recalculate load and margin, and identify the structural adjustments the next quarter requires. A capacity architecture that is measured but not reviewed over time will drift out of alignment with the professional function it is designed to serve.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 5 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 5 &mdash; Boundary Audit</div>
+      <em>Are the boundaries around your professional capacity architecturally defined, clearly communicated, and consistently held under pressure?</em>
+      <p>Capacity Measurement established the current state of your load and margin. The Boundary Audit examines the structural mechanism that determines what enters your capacity in the first place. Measurement without boundaries is diagnostic without intervention: you can see the problem but have not yet built the structure that prevents it from recurring.</p>
+    </div>
+    <div class="cta-block">
+      <p>If your professional capacity is being managed by feel rather than measurement — and the result is recurring overcommitment, missed margin, and structural decisions made too late — the Futureproof&trade; Diagnostic builds the measurement architecture and maps the first structural adjustment. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; CAPACITY &nbsp;&middot;&nbsp; Optimal Operations</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>

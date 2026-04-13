@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTHORITY · Phase 3 · Audit 8 · Communication Quality · Futureproof™</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#282730;--text:#ffffff;--gold:#D4AF37;--divider:rgba(212,175,55,0.25);--surface:rgba(255,255,255,0.04);--score-size:clamp(80px,14vw,130px);}
+  @media(prefers-color-scheme:light){:root{--bg:#F5F3EE;--text:#1A1920;--gold:#C49A28;--divider:rgba(196,154,40,0.3);--surface:rgba(0,0,0,0.04);}}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background-color:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;font-size:19px;line-height:1.8;min-height:100vh;}
+  header{padding:48px 0 36px;text-align:center;border-bottom:1px solid var(--divider);}
+  .wordmark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(14px,2vw,16px);letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-bottom:8px;}
+  .report-label{font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(12px,1.8vw,14px);letter-spacing:.2em;text-transform:uppercase;opacity:.55;}
+  main{max-width:820px;margin:0 auto;padding:0 28px 96px;}
+  .score-section{text-align:center;padding:64px 0 48px;border-bottom:1px solid var(--divider);}
+  .score-label{font-family:'Jost',sans-serif;font-weight:300;font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.45;margin-bottom:20px;}
+  .score-display{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:var(--score-size);line-height:1;color:var(--gold);letter-spacing:-.02em;margin-bottom:8px;}
+  .score-denom{font-family:'Jost',sans-serif;font-weight:300;font-size:15px;letter-spacing:.2em;opacity:.4;}
+  .bands-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .section-eyebrow{font-family:'Jost',sans-serif;font-weight:500;font-size:18px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);opacity:1;margin-bottom:6px;}
+  .section-title{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin-bottom:28px;letter-spacing:.01em;}
+  .bands-intro{font-size:16px;opacity:.55;margin-bottom:28px;letter-spacing:.04em;}
+  .band-row{display:grid;grid-template-columns:140px 90px 1fr;gap:0;padding:22px 0;border-top:1px solid var(--divider);align-items:start;}
+  .band-row:last-child{border-bottom:1px solid var(--divider);}
+  .band-name{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:19px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);padding-right:16px;padding-top:2px;}
+  .band-range{font-family:'Jost',sans-serif;font-weight:300;font-size:18px;color:#DFDFDE;opacity:1;letter-spacing:.05em;padding-top:3px;}
+  .band-desc{font-size:18px;line-height:1.7;color:#ffffff;opacity:1;}
+  .content-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .content-section p{margin-bottom:20px;color:#ffffff;opacity:1;font-size:19px;}
+  .content-section p:last-child{margin-bottom:0;}
+  .diagnosis-band{background:var(--surface);border-left:2px solid var(--gold);padding:28px 28px 24px;margin:28px 0;}
+  .diagnosis-band-label{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+  .diagnosis-band p{color:#ffffff;opacity:1;margin-bottom:16px;font-size:19px;line-height:1.75;}
+  .action-label{font-family:'Jost',sans-serif;font-weight:500;font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.85;margin-top:22px;margin-bottom:8px;}
+  .next-section{padding:52px 0;border-bottom:1px solid var(--divider);}
+  .next-preview{background:var(--surface);padding:32px;margin:24px 0;}
+  .next-preview-label{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:22px;margin-bottom:12px;letter-spacing:.02em;}
+  .next-preview p{font-size:19px;line-height:1.75;color:#ffffff;opacity:1;margin-bottom:12px;}
+  .next-preview em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--gold);opacity:.9;display:block;margin-bottom:14px;}
+  .cta-block{margin-top:36px;padding:36px;border:1px solid var(--divider);text-align:center;}
+  .cta-block p{font-size:18px;color:#ffffff;opacity:1;margin-bottom:24px;line-height:1.75;}
+  .cta-link{display:inline-block;font-family:'Jost',sans-serif;font-weight:400;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:#282730;background:var(--gold);padding:16px 36px;text-decoration:none;transition:opacity .2s;}
+  .cta-link:hover{opacity:.85;}
+  footer{text-align:center;padding:48px 24px;border-top:1px solid var(--divider);}
+  .footer-brand{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:15px;letter-spacing:.15em;opacity:.4;margin-bottom:8px;}
+  .footer-copy{font-size:12px;letter-spacing:.15em;opacity:.25;text-transform:uppercase;}
+  @media(max-width:560px){.band-row{grid-template-columns:1fr;gap:6px;}.diagnosis-band{padding:20px 18px;}.cta-block{padding:24px 18px;}body{font-size:18px;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+  .score-section{animation:fadeUp .5s ease both;}
+  .bands-section{animation:fadeUp .6s ease both .1s;}
+  .content-section{animation:fadeUp .6s ease both .2s;}
+  .next-section{animation:fadeUp .6s ease both .3s;}
+</style>
+</head>
+<body>
+<header>
+  <div class="wordmark">Futureproof&trade; Architecture &nbsp;&middot;&nbsp; 1K1 Advisory</div>
+  <div class="report-label">AUTHORITY &nbsp;&middot;&nbsp; Congruent Communications &nbsp;&middot;&nbsp; Phase 3 &nbsp;&middot;&nbsp; Audit 8 of 12</div>
+</header>
+<main>
+  <section class="score-section">
+    <div class="score-label">Your Score</div>
+    <div class="score-display" id="sv">&mdash;</div>
+    <div class="score-denom">out of 40</div>
+  </section>
+  <section class="bands-section">
+    <div class="section-eyebrow">Where You Stand</div>
+    <div class="section-title">Three bands. One is yours.<br>Your score tells you which.</div>
+    <div class="bands-intro">Each band reflects the current state of your authority architecture in this area.</div>
+    <div class="band-row"><div class="band-name">Leveraging</div><div class="band-range">30 &ndash; 40</div><div class="band-desc">Your written and spoken professional communication reflects the authority you claim. The precision of your language, the clarity of your thinking expressed in communication, and the standard of your professional correspondence are consistently at the level that authority-positioned professionals operate.</div></div>
+    <div class="band-row"><div class="band-name">Leaking</div><div class="band-range">19 &ndash; 29</div><div class="band-desc">Communication quality is generally adequate. Your professional communication is clear and competent. But it does not consistently express the precision, depth, and authority-level standard that your expertise warrants — and in high-stakes professional contexts, the communication quality is occasionally working below its potential.</div></div>
+    <div class="band-row"><div class="band-name">Losing</div><div class="band-range">8 &ndash; 18</div><div class="band-desc">There is a gap between the expertise you hold and the quality of its professional communication. The communication — written or spoken — does not consistently express the professional authority it should. The expertise exists; its expression in communication is underdeveloping the authority signal.</div></div>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Phase 3 Context</div>
+    <div class="section-title">Why This Matters Now</div>
+    <p>Phase 3 is Diagnosis. The structural patterns that produce professional authority — or undermine it — are not always visible from within.</p><p>The dimensions of authority have been examined and measured. Phase 3 moves to the patterns that govern how authority is expressed, received, and extended: whether the digital presence reinforces or undermines the professional signal, whether communication quality matches the authority being claimed, and whether recognition is confined to a geography or professional context that limits the ceiling of what authority can produce.</p><p>Phase 3 continues by examining the most immediate and most frequently evaluated element of the authority architecture: the quality of professional communication — the standard of written and spoken expression through which expertise is conveyed and authority is either established or undermined.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 8 Context</div>
+    <div class="section-title">Why This Audit Matters</div>
+    <p>Communication quality is not about eloquence — it is about the precision with which professional thinking is expressed. An authority-level professional communicates with the kind of structural clarity that signals the depth of the thinking behind it: precise language, well-organised reasoning, ideas expressed at a level of sophistication appropriate to the expertise being communicated.</p><p>Every professional communication is a sample of professional thinking. When the sample is at authority level, it reinforces the authority architecture. When it falls below that level — imprecise, unclear, or at a lower standard than the expertise warrants — it creates a contradiction that undermines the authority signal.</p>
+  </section>
+  <section class="content-section">
+    <div class="section-eyebrow">Audit 8 Diagnosis</div>
+    <div class="section-title">Communication Quality</div>
+    <p style="color:#DFDFDE;opacity:.75;font-size:18px;margin-bottom:32px;">Eight dimensions of communication quality — written communication precision, spoken communication clarity, reasoning architecture expression, professional correspondence standard, executive communication quality, communication structure, authority-appropriate language, and professional communication consistency.</p>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Losing &nbsp;&middot;&nbsp; 8&ndash;18</div>
+      <p>There is a structural gap between the expertise held and the quality of its professional communication expression. The thinking is present; the expression of that thinking in written or spoken form is not consistently at the level that authority-positioned professionals operate.</p>
+<p>The structural consequence is that the authority architecture is being undermined at every communication touchpoint. Each email, each report, each presentation, each professional conversation is a micro-evaluation of professional authority. A communication that falls below the authority standard creates a micro-deduction from the authority impression — and those deductions accumulate into a structural gap between the expertise held and the authority recognised.</p>
+<div class='action-label'>What to do this week</div>
+<p>Conduct a communication quality audit. Select three professional communications you produced in the past week — an email, a report section, a meeting contribution. Read each as if you were encountering them as a potential client evaluating professional authority. Does each communicate the expertise and thinking quality of an authority-level professional? What specifically would need to change to bring each to that standard?</p>
+<div class='action-label'>Within 14 days</div>
+<p>Identify the most frequent communication context in which your quality most consistently falls below the authority standard — the type of communication where the gap between expertise and expression is largest. For most professionals, it is either written communications produced quickly under time pressure, or spoken contributions in high-stakes group contexts. Identify your specific gap context.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Implement one structural communication quality improvement for the identified gap context: a standard for email response quality, a preparation protocol for high-stakes verbal contributions, a review process for written work product before distribution. The structural improvement is not about effort — it is about architecture. A professional with an architectural quality standard produces better communication than one relying on willpower alone.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leaking &nbsp;&middot;&nbsp; 19&ndash;29</div>
+      <p>Communication quality is generally competent but not consistently at authority level. In some contexts and formats the communication is strong — precise, well-structured, expressing the expertise at its best. In others, particularly under time pressure or in formats that receive less preparation attention, the quality is below the authority standard. The inconsistency is the structural target.</p>
+<div class='action-label'>What to do this week</div>
+<p>Identify the specific condition under which your communication quality most frequently falls below your own standard. Time pressure? Unfamiliar audience? Particular communication format? The specific condition of quality collapse is the structural target — not the general intention to communicate better.</p>
+<div class='action-label'>Within 14 days</div>
+<p>Build a quality floor for the specific condition identified: a minimum standard that holds even under that condition. Not the aspirational standard — the minimum non-negotiable standard. For written communications: a review step before sending, even if brief. For spoken contributions: a preparation framework that can be applied quickly. The quality floor is an architectural standard, not a willpower commitment.</p>
+<div class='action-label'>Within 30 days</div>
+<p>Test the quality floor over 30 days in the specific collapse condition. Did it hold? Did communication quality in that context improve? The measurement is the evidence of whether the architectural standard is functioning — or whether it requires further structural reinforcement.</p>
+    </div>
+    <div class="diagnosis-band">
+      <div class="diagnosis-band-label">If you scored Leveraging &nbsp;&middot;&nbsp; 30&ndash;40</div>
+      <p>Communication quality is consistently at authority level. The expression of expertise in written and spoken form reflects the depth and precision of the expertise itself. The opportunity at this level is in communication authority extension — whether the quality of communication that currently operates at authority level in familiar contexts is also operating at that level in high-stakes or unfamiliar contexts.</p>
+<div class='action-label'>What to do now</div>
+<p>Identify the single most high-stakes communication context in your professional life — the setting where the quality of your communication has the highest consequence for the authority impression it creates. Is your communication in that specific context at the ceiling of what your expertise and professional standard can produce? If there is any gap, that context is where the most concentrated communication quality investment will produce the highest authority return.</p>
+    </div>
+  </section>
+  <section class="next-section">
+    <div class="section-eyebrow">What Comes Next</div>
+    <div class="section-title">Audit 9 arrives next week.</div>
+    <div class="next-preview">
+      <div class="next-preview-label">Audit 9 &mdash; Geographic Recognition</div>
+      <em>Is your professional authority recognised at the geographic scope your ambition requires — and is the reach of your recognition growing deliberately or by accident?</em>
+      <p>Communication Quality examined the vehicle of authority expression. Geographic Recognition examines its reach — whether the professional authority you have built is recognised across the geographic and professional scope that your career ambition requires, or whether it is confined to a context that is smaller than your capability warrants.</p>
+    </div>
+    <div class="cta-block">
+      <p>If the quality of your professional communication is not consistently expressing the authority your expertise warrants — and the gap is creating a structural inconsistency in the authority impression — the Futureproof&trade; Diagnostic identifies the specific communication quality gaps and builds the architectural standard that closes them. It is a private 90-minute engagement producing a written one-page summary and the recommended first move.</p>
+      <a href="https://audit.1k1.uk/advisory-diagnostic" class="cta-link">Request the Futureproof&trade; Diagnostic</a>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-brand">Futureproof&trade; Pillar &nbsp;&middot;&nbsp; AUTHORITY &nbsp;&middot;&nbsp; Congruent Communications</div>
+  <div class="footer-copy">&copy; Futureproof Architecture&trade; &nbsp;&middot;&nbsp; 1K1 Advisory &nbsp;&middot;&nbsp; 1K1.uk &nbsp;&middot;&nbsp; Strictly private circulation</div>
+</footer>
+<script>
+(function(){var p=new URLSearchParams(window.location.search),s=p.get('score'),e=document.getElementById('sv');if(s&&!isNaN(parseInt(s,10)))e.textContent=parseInt(s,10);})();
+</script>
+</body>
+</html>
