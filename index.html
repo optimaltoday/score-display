@@ -1,17 +1,435 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intelligence Reports — 1K1 Advisory · Futureproof Architecture™</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  body { margin: 0; padding: 20px; font-family: sans-serif; text-align: center; }
-  #score { font-size: 64px; font-weight: bold; color: #000; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #282730;
+    --text: #ffffff;
+    --gold: #D4AF37;
+    --cream: #DFDFDE;
+    --divider: rgba(212,175,55,0.22);
+    --surface: rgba(255,255,255,0.04);
+    --muted: rgba(223,223,222,0.72);
+  }
+
+  html { background: var(--bg); color: var(--text); font-family: 'Jost', sans-serif; font-size: 18px; line-height: 1.75; }
+  body { max-width: 820px; margin: 0 auto; padding: 0 28px 80px; }
+
+  /* COVER */
+  .cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px 0 48px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  .wordmark { font-family: 'Jost', sans-serif; font-size: clamp(13px, 1.8vw, 15px); font-weight: 300; letter-spacing: 0.18em; color: var(--gold); text-transform: uppercase; }
+  .report-label { font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 300; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; margin-top: 8px; }
+
+  .cover-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 0 60px;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(44px, 7.5vw, 76px);
+    font-weight: 500;
+    line-height: 1.05;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+
+  .subtitle {
+    font-family: 'Jost', sans-serif;
+    font-size: clamp(15px, 2vw, 18px);
+    font-weight: 300;
+    color: var(--cream);
+    letter-spacing: 0.04em;
+    max-width: 560px;
+    line-height: 1.65;
+  }
+
+  .cover-meta {
+    border-top: 1px solid var(--divider);
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .cover-meta-left { font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.8; }
+  .cover-meta-right { font-size: 13px; color: var(--gold); font-weight: 400; letter-spacing: 0.1em; text-align: right; }
+
+  section { padding: 72px 0; border-bottom: 1px solid var(--divider); }
+  section:last-of-type { border-bottom: none; }
+
+  .eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 28px;
+  }
+
+  p { margin-bottom: 22px; color: var(--text); font-size: 18px; font-weight: 300; line-height: 1.78; }
+  p:last-child { margin-bottom: 0; }
+
+  .lead {
+    font-size: clamp(19px, 2.6vw, 24px);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--cream);
+    line-height: 1.5;
+    margin-bottom: 40px;
+    padding-left: 24px;
+    border-left: 2px solid var(--gold);
+  }
+
+  /* REPORT CARDS */
+  .report-list { display: flex; flex-direction: column; gap: 2px; margin: 40px 0; }
+
+  .report-card {
+    display: flex;
+    align-items: stretch;
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .report-card:hover { border-color: rgba(212,175,55,0.5); }
+
+  .report-card.available { border-left: 3px solid var(--gold); }
+  .report-card.preview { border-left: 3px solid rgba(212,175,55,0.3); opacity: 0.7; }
+
+  .report-card-body { padding: 24px 28px; flex: 1; }
+
+  .report-tag {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .report-card.preview .report-tag { color: var(--muted); }
+
+  .report-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 2.8vw, 26px);
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .report-desc {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .report-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    font-size: 20px;
+    color: var(--gold);
+    opacity: 0.6;
+  }
+
+  .report-card.preview .report-arrow { opacity: 0.2; }
+
+  /* SERVICE CATEGORIES */
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 36px 0;
+  }
+
+  .category-card {
+    background: var(--surface);
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    padding: 24px 24px 20px;
+  }
+
+  .category-icon {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: var(--gold);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    line-height: 1;
+  }
+
+  .category-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--cream);
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .category-desc {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .finding {
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--cream);
+    font-style: italic;
+    margin: 28px 0;
+    padding: 20px 24px;
+    background: var(--surface);
+    border-left: 2px solid var(--gold);
+    line-height: 1.65;
+  }
+
+  /* CTA FORM SECTION */
+  .cta-section {
+    padding: 72px 0 48px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(30px, 4.8vw, 52px);
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  .cta-body {
+    font-size: 17px;
+    font-weight: 300;
+    color: var(--cream);
+    max-width: 580px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: #1A1920;
+    font-family: 'Jost', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 18px 44px;
+    border-radius: 2px;
+    transition: opacity 0.2s;
+  }
+
+  .cta-button:hover { opacity: 0.88; }
+
+  .cta-note {
+    margin-top: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  strong { font-weight: 500; color: var(--cream); }
+
+  footer {
+    padding: 40px 0;
+    border-top: 1px solid var(--divider);
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 300;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+
+  @media (max-width: 560px) {
+    body { padding: 0 20px 60px; }
+    .cover { min-height: auto; padding: 40px 0 36px; }
+    .cover-title { padding: 56px 0 40px; }
+    .report-arrow { padding: 0 16px; }
+    .report-card-body { padding: 20px 20px; }
+  }
 </style>
 </head>
 <body>
-<div id="score">—</div>
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const s = params.get('score');
-  if (s) document.getElementById('score').innerText = s;
-</script>
+
+<!-- COVER -->
+<div class="cover">
+  <div>
+    <div class="wordmark">1K1 Advisory · Futureproof Architecture™</div>
+    <div class="report-label">Intelligence Reports · reports.1k1.uk</div>
+  </div>
+
+  <div class="cover-title">
+    <h1>What the evidence shows — before the conversation begins.</h1>
+    <p class="subtitle">A curated series of intelligence briefings drawn from Futureproof Architecture™ — built for those who prefer to read before they decide.</p>
+  </div>
+
+  <div class="cover-meta">
+    <div class="cover-meta-left">
+      Private Circulation · ASEAN Region<br>
+      Futureproof Architecture™ · 1K1 Advisory
+    </div>
+    <div class="cover-meta-right">
+      reports.1k1.uk<br>
+      1K1.uk
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT THIS SUBDOMAIN -->
+<section>
+  <div class="eyebrow">What This Is</div>
+  <h2>Intelligence before engagement.</h2>
+
+  <p class="lead">Every report here is built on a single operating principle: that the evidence for what needs to change should be visible before anyone asks you to trust a process or pay for a service.</p>
+
+  <p>These are not marketing documents. They are structured analytical briefings — drawing on historical patterns, regional data, and the intellectual framework of Futureproof Architecture™ to name what is happening in specific domains, for specific types of people, in this specific region and moment.</p>
+
+  <p>If a report describes your situation with precision, that precision is the point. It is how we determine whether a conversation is worth having — for both sides.</p>
+
+  <div class="finding">"Futureproof Results require Architectural Coherence — to withstand crisis, harness chaos, outlast change, and transcend collapse."</div>
+</section>
+
+<!-- AVAILABLE REPORTS -->
+<section>
+  <div class="eyebrow">Available Now</div>
+  <h2>Current Briefings</h2>
+
+  <div class="report-list">
+
+    <a class="report-card available" href="./futureproof-strategic-report.html">
+      <div class="report-card-body">
+        <div class="report-tag">Strategic Report · Public</div>
+        <div class="report-title">The Architecture of Anxiety</div>
+        <p class="report-desc">Six national profiles. The financial cost of structural incoherence across the Asia-Pacific region — and what history records about populations that cannot perceive a coherent path to their future.</p>
+      </div>
+      <div class="report-arrow">→</div>
+    </a>
+
+    <a class="report-card available" href="./authority-architecture.html">
+      <div class="report-card-body">
+        <div class="report-tag">Authority Architecture · Business Briefing</div>
+        <div class="report-title">What Your Business Is Losing Right Now</div>
+        <p class="report-desc">A structured diagnostic for business owners and professionals across ASEAN — naming the revenue that exits through structural gaps, and the revenue that sits uncollected for the same reason.</p>
+      </div>
+      <div class="report-arrow">→</div>
+    </a>
+
+    <div class="report-card preview">
+      <div class="report-card-body">
+        <div class="report-tag">Upcoming · Optimization Architecture</div>
+        <div class="report-title">The Efficiency Gap</div>
+        <p class="report-desc">How operational drag — invisible to the owner, visible to the analyst — systematically caps the revenue ceiling of otherwise sound businesses. ASEAN regional assessment.</p>
+      </div>
+      <div class="report-arrow">→</div>
+    </div>
+
+    <div class="report-card preview">
+      <div class="report-card-body">
+        <div class="report-tag">Upcoming · Multiplication Architecture</div>
+        <div class="report-title">The IP You Already Own</div>
+        <p class="report-desc">For experts, founders, and knowledge-holders whose intellectual capital exists but has never been structured into a deployable, scalable, or licensable architecture.</p>
+      </div>
+      <div class="report-arrow">→</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE CATEGORIES -->
+<section>
+  <div class="eyebrow">The Architecture</div>
+  <h2>Four domains. One framework.</h2>
+  <p>Every report on this subdomain corresponds to one of the four architecture domains of Futureproof Architecture™. Each domain addresses a specific category of structural problem — for professionals, business owners, and organisations navigating the ASEAN region.</p>
+
+  <div class="category-grid">
+    <div class="category-card">
+      <div class="category-icon">Ι</div>
+      <div class="category-name">Optimization Architecture</div>
+      <p class="category-desc">For organizations losing ground to internal inefficiency, structural misalignment, or resource leakage they cannot locate.</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon">ΙΙ</div>
+      <div class="category-name">Multiplication Architecture</div>
+      <p class="category-desc">For knowledge-holders whose intellectual capital has never been structured into a deployable or licensable architecture.</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon">ΙΙΙ</div>
+      <div class="category-name">Authority Architecture</div>
+      <p class="category-desc">For professionals and businesses whose presence, signal, and operational structure do not yet reflect the value of what they deliver.</p>
+    </div>
+    <div class="category-card">
+      <div class="category-icon">ΙV</div>
+      <div class="category-name">Breakthrough Architecture</div>
+      <p class="category-desc">For individuals and organizations at structural thresholds — where the next stage requires more than refinement of the current model.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="eyebrow" style="margin-bottom: 20px;">If a report named your situation</div>
+  <div class="cta-title">Tell us what you are navigating.</div>
+  <p class="cta-body">Complete the brief form below. It takes under three minutes. Your response is reviewed directly — not by a system, not by a sales team. We respond within 48 hours with either a relevant report or a direct note on next steps.</p>
+  <a class="cta-button" href="YOUR_TALLY_FORM_URL">Submit an Inquiry →</a>
+  <p class="cta-note">
+    Fields covered: name · contact · country · domain of interest<br>
+    Optimization · Multiplication · Authority · Breakthrough<br>
+    Audit · Advisory · Architecture<br><br>
+    Application-based · Private · 1K1 Advisory
+  </p>
+</div>
+
+<footer>
+  © Futureproof Architecture™ · 1K1 Advisory · 1K1.uk<br>
+  <span style="opacity: 0.5;">reports.1k1.uk · Private Circulation · ASEAN Region</span>
+</footer>
+
 </body>
 </html>
